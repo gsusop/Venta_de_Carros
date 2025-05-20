@@ -1,12 +1,138 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Gsus\\Desktop\\Trabajo Final de Aplicacion  y Servicios WEB\\Servicios\\Venta_de_Carros\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9C2CD61F-C545-4846-AC1F-7901AB57F59F}|Venta_de_Carros.csproj|c:\\users\\gsus\\desktop\\trabajo final de aplicacion  y servicios web\\servicios\\venta_de_carros\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C2CD61F-C545-4846-AC1F-7901AB57F59F}|Venta_de_Carros.csproj|solutionrelative:models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C2CD61F-C545-4846-AC1F-7901AB57F59F}|Venta_de_Carros.csproj|c:\\users\\gsus\\desktop\\trabajo final de aplicacion  y servicios web\\servicios\\venta_de_carros\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C2CD61F-C545-4846-AC1F-7901AB57F59F}|Venta_de_Carros.csproj|solutionrelative:controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C2CD61F-C545-4846-AC1F-7901AB57F59F}|Venta_de_Carros.csproj|c:\\users\\gsus\\desktop\\trabajo final de aplicacion  y servicios web\\servicios\\venta_de_carros\\clases\\clscliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C2CD61F-C545-4846-AC1F-7901AB57F59F}|Venta_de_Carros.csproj|solutionrelative:clases\\clscliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C2CD61F-C545-4846-AC1F-7901AB57F59F}|Venta_de_Carros.csproj|c:\\users\\gsus\\desktop\\trabajo final de aplicacion  y servicios web\\servicios\\venta_de_carros\\models\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C2CD61F-C545-4846-AC1F-7901AB57F59F}|Venta_de_Carros.csproj|solutionrelative:models\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C2CD61F-C545-4846-AC1F-7901AB57F59F}|Venta_de_Carros.csproj|c:\\users\\gsus\\desktop\\trabajo final de aplicacion  y servicios web\\servicios\\venta_de_carros\\clases\\clsempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C2CD61F-C545-4846-AC1F-7901AB57F59F}|Venta_de_Carros.csproj|solutionrelative:clases\\clsempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C2CD61F-C545-4846-AC1F-7901AB57F59F}|Venta_de_Carros.csproj|c:\\users\\gsus\\desktop\\trabajo final de aplicacion  y servicios web\\servicios\\venta_de_carros\\controllers\\empleadocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C2CD61F-C545-4846-AC1F-7901AB57F59F}|Venta_de_Carros.csproj|solutionrelative:controllers\\empleadocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C2CD61F-C545-4846-AC1F-7901AB57F59F}|Venta_de_Carros.csproj|C:\\Users\\Gsus\\Desktop\\Trabajo Final de Aplicacion  y Servicios WEB\\Servicios\\Venta_de_Carros\\models\\bdventacarros.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{9C2CD61F-C545-4846-AC1F-7901AB57F59F}|Venta_de_Carros.csproj|solutionrelative:models\\bdventacarros.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\Gsus\\Desktop\\Trabajo Final de Aplicacion  y Servicios WEB\\Servicios\\Venta_de_Carros\\Models\\Cliente.cs",
+              "RelativeDocumentMoniker": "Models\\Cliente.cs",
+              "ToolTip": "C:\\Users\\Gsus\\Desktop\\Trabajo Final de Aplicacion  y Servicios WEB\\Servicios\\Venta_de_Carros\\Models\\Cliente.cs",
+              "RelativeToolTip": "Models\\Cliente.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T18:00:13.824Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Empleado.cs",
+              "DocumentMoniker": "C:\\Users\\Gsus\\Desktop\\Trabajo Final de Aplicacion  y Servicios WEB\\Servicios\\Venta_de_Carros\\Models\\Empleado.cs",
+              "RelativeDocumentMoniker": "Models\\Empleado.cs",
+              "ToolTip": "C:\\Users\\Gsus\\Desktop\\Trabajo Final de Aplicacion  y Servicios WEB\\Servicios\\Venta_de_Carros\\Models\\Empleado.cs",
+              "RelativeToolTip": "Models\\Empleado.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T14:36:08.94Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ClienteController.cs",
+              "DocumentMoniker": "C:\\Users\\Gsus\\Desktop\\Trabajo Final de Aplicacion  y Servicios WEB\\Servicios\\Venta_de_Carros\\Controllers\\ClienteController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ClienteController.cs",
+              "ToolTip": "C:\\Users\\Gsus\\Desktop\\Trabajo Final de Aplicacion  y Servicios WEB\\Servicios\\Venta_de_Carros\\Controllers\\ClienteController.cs",
+              "RelativeToolTip": "Controllers\\ClienteController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAD0AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T14:26:05.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "clsCliente.cs",
+              "DocumentMoniker": "C:\\Users\\Gsus\\Desktop\\Trabajo Final de Aplicacion  y Servicios WEB\\Servicios\\Venta_de_Carros\\Clases\\clsCliente.cs",
+              "RelativeDocumentMoniker": "Clases\\clsCliente.cs",
+              "ToolTip": "C:\\Users\\Gsus\\Desktop\\Trabajo Final de Aplicacion  y Servicios WEB\\Servicios\\Venta_de_Carros\\Clases\\clsCliente.cs",
+              "RelativeToolTip": "Clases\\clsCliente.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T14:25:49.556Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EmpleadoController.cs",
+              "DocumentMoniker": "C:\\Users\\Gsus\\Desktop\\Trabajo Final de Aplicacion  y Servicios WEB\\Servicios\\Venta_de_Carros\\Controllers\\EmpleadoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EmpleadoController.cs",
+              "ToolTip": "C:\\Users\\Gsus\\Desktop\\Trabajo Final de Aplicacion  y Servicios WEB\\Servicios\\Venta_de_Carros\\Controllers\\EmpleadoController.cs",
+              "RelativeToolTip": "Controllers\\EmpleadoController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T03:45:19.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BDVentacarros.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\Gsus\\Desktop\\Trabajo Final de Aplicacion  y Servicios WEB\\Servicios\\Venta_de_Carros\\Models\\BDVentacarros.edmx",
+              "RelativeDocumentMoniker": "Models\\BDVentacarros.edmx",
+              "ToolTip": "C:\\Users\\Gsus\\Desktop\\Trabajo Final de Aplicacion  y Servicios WEB\\Servicios\\Venta_de_Carros\\Models\\BDVentacarros.edmx [Diagram1]",
+              "RelativeToolTip": "Models\\BDVentacarros.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2025-05-13T23:06:31.95Z",
+              "EditorCaption": " [Diagram1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "clsEmpleado.cs",
+              "DocumentMoniker": "C:\\Users\\Gsus\\Desktop\\Trabajo Final de Aplicacion  y Servicios WEB\\Servicios\\Venta_de_Carros\\Clases\\clsEmpleado.cs",
+              "RelativeDocumentMoniker": "Clases\\clsEmpleado.cs",
+              "ToolTip": "C:\\Users\\Gsus\\Desktop\\Trabajo Final de Aplicacion  y Servicios WEB\\Servicios\\Venta_de_Carros\\Clases\\clsEmpleado.cs",
+              "RelativeToolTip": "Clases\\clsEmpleado.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T23:02:35.472Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
