@@ -9,6 +9,7 @@
 
 namespace Venta_de_Carros.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -34,13 +35,16 @@ namespace Venta_de_Carros.Models
         public System.DateTime Fecha_Ingreso { get; set; }
         public Nullable<System.DateTime> Fecha_Salida { get; set; }
         public string Estado_Vehiculo { get; set; }
-    
+        [JsonIgnore]
         public virtual Cliente Cliente { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [JsonIgnore]
         public virtual ICollection<Historial_Vehiculos> Historial_Vehiculos { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [JsonIgnore]
         public virtual ICollection<Ordenes_de_Servicio> Ordenes_de_Servicio { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [JsonIgnore]
         public virtual ICollection<Vehiculos_en_Taller_Ubicacion> Vehiculos_en_Taller_Ubicacion { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Venta> Ventas { get; set; }

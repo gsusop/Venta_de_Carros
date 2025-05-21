@@ -20,31 +20,31 @@ namespace Venta_de_Carros.Clases
 
         public string Actualizar()
         {
-            Empleado clt = Consultar(Empleado.Numero_Documento);
-            if (clt == null)
+            Empleado emp = Consultar(Empleado.Numero_Documento);
+            if (emp == null)
             {
                 return "EL documento no existe";
             }
-            ITM_Ventas.Empleados.AddOrUpdate(Empleado);//Actualiza un emplado en la tabla EMPLEADO
+            ITM_Ventas.Empleados.AddOrUpdate(Empleado);//Actualiza un empleado en la tabla EMPLEADO
             ITM_Ventas.SaveChanges();
             return "Se actualizó correctamente";
         }
         public Empleado Consultar(string Documento)
         {
-            Empleado clt = ITM_Ventas.Empleados.FirstOrDefault(e => e.Numero_Documento == Documento);//consulta un Empleado por su documento
-            return clt;
+            Empleado emp = ITM_Ventas.Empleados.FirstOrDefault(e => e.Numero_Documento == Documento);//consulta un Empleado por su documento
+            return emp;
         }
 
         public string Eliminar()
         {
             try
             {
-                Empleado clt = Consultar(Empleado.Numero_Documento);
-                if (clt == null)
+                Empleado emp = Consultar(Empleado.Numero_Documento);
+                if (emp == null)
                 {
                     return "EL documento no existe";
                 }
-                ITM_Ventas.Empleados.Remove(clt);//Elimina un Empleado de la tabla Empleado
+                ITM_Ventas.Empleados.Remove(emp);//Elimina un Empleado de la tabla Empleado
                 ITM_Ventas.SaveChanges();//GUarda los cambios
                 return "Se eliminó el Empleado exitosamente";// Mensaje de confirmacion
             }

@@ -9,6 +9,7 @@
 
 namespace Venta_de_Carros.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -24,7 +25,7 @@ namespace Venta_de_Carros.Models
         public string Nombre_Ubicacion { get; set; }
         public string Direccion { get; set; }
         public string Ciudad { get; set; }
-    
+        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Vehiculos_en_Taller_Ubicacion> Vehiculos_en_Taller_Ubicacion { get; set; }
     }
