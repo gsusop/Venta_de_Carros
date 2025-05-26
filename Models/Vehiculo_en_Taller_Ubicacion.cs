@@ -12,15 +12,14 @@ namespace Venta_de_Carros.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Historial_Vehiculos
+    public partial class Vehiculo_en_Taller_Ubicacion
     {
-        public int ID_Historial { get; set; }
+        public int ID_Vehiculo_Ubicacion { get; set; }
         public int ID_Vehiculo { get; set; }
-        public int ID_Orden { get; set; }
-        public System.DateTime Fecha_Visita { get; set; }
-        public string Descripcion_Problema { get; set; }
+        public int ID_Ubicacion { get; set; }
+        public Nullable<System.DateTime> Fecha_Asignacion { get; set; }
     
-        public virtual Ordenes_de_Servicio Ordenes_de_Servicio { get; set; }
+        public virtual Ubicaciones_Taller Ubicaciones_Taller { get; set; }
         public virtual Vehiculo Vehiculo { get; set; }
     }
 }

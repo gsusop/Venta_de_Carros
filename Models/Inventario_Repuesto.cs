@@ -12,24 +12,25 @@ namespace Venta_de_Carros.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Detalle_Repuestos_Orden
+    public partial class Inventario_Repuesto
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Detalle_Repuestos_Orden()
+        public Inventario_Repuesto()
         {
-            this.Detalle_Factura = new HashSet<Detalle_Factura>();
+            this.Detalle_Repuestos_Orden = new HashSet<Detalle_Repuestos_Orden>();
         }
     
-        public int ID_Detalle_Repuesto { get; set; }
-        public int ID_Orden { get; set; }
         public int ID_Repuesto { get; set; }
-        public int Cantidad_Utilizada { get; set; }
+        public string Codigo_Repuesto { get; set; }
+        public string Nombre_Repuesto { get; set; }
+        public string Descripcion { get; set; }
+        public int Cantidad_Stock { get; set; }
         public Nullable<decimal> Precio_Unitario { get; set; }
-        public Nullable<decimal> Subtotal { get; set; }
+        public Nullable<int> ID_Proveedor { get; set; }
+        public Nullable<System.DateTime> Fecha_Ultima_Entrada { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Detalle_Factura> Detalle_Factura { get; set; }
-        public virtual Ordenes_de_Servicio Ordenes_de_Servicio { get; set; }
-        public virtual Inventario_Repuesto Inventario_Repuesto { get; set; }
+        public virtual ICollection<Detalle_Repuestos_Orden> Detalle_Repuestos_Orden { get; set; }
+        public virtual Proveedor Proveedor { get; set; }
     }
 }

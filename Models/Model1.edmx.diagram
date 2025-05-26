@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="959dcaf4e6c64e3d9558c90bfb6771bc" Name="Diagram1">
+        <EntityTypeShape EntityType="VentaDeCarrosTallerModel.Cliente" Width="1.5" PointX="1.5" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VentaDeCarrosTallerModel.Detalle_Factura" Width="1.5" PointX="10.5" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VentaDeCarrosTallerModel.Detalle_Repuestos_Orden" Width="1.5" PointX="8.25" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VentaDeCarrosTallerModel.Detalle_Servicio" Width="1.5" PointX="8.25" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VentaDeCarrosTallerModel.Empleado" Width="1.5" PointX="0.75" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VentaDeCarrosTallerModel.Factura" Width="1.5" PointX="5.25" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VentaDeCarrosTallerModel.Garantia" Width="1.5" PointX="3.75" PointY="24.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VentaDeCarrosTallerModel.Historial_Vehiculo" Width="1.5" PointX="11.25" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VentaDeCarrosTallerModel.Inventario_Repuesto" Width="1.5" PointX="6" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VentaDeCarrosTallerModel.Ordenes_de_Servicio" Width="1.5" PointX="3" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VentaDeCarrosTallerModel.Perfil" Width="1.5" PointX="3.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VentaDeCarrosTallerModel.Proveedor" Width="1.5" PointX="3.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VentaDeCarrosTallerModel.Revisiones_Garantia" Width="1.5" PointX="6" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VentaDeCarrosTallerModel.Servicio" Width="1.5" PointX="6" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VentaDeCarrosTallerModel.Servicios_Tipos" Width="1.5" PointX="8.25" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VentaDeCarrosTallerModel.Tipos_de_Servicio" Width="1.5" PointX="6" PointY="26.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VentaDeCarrosTallerModel.Ubicaciones_Taller" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VentaDeCarrosTallerModel.Usuario" Width="1.5" PointX="6" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VentaDeCarrosTallerModel.Usuario_Perfil" Width="1.5" PointX="8.25" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VentaDeCarrosTallerModel.Vehiculo" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VentaDeCarrosTallerModel.Vehiculo_en_Taller_Ubicacion" Width="1.5" PointX="9" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VentaDeCarrosTallerModel.Venta" Width="1.5" PointX="1.5" PointY="24.375" IsExpanded="true" />
+        <AssociationConnector Association="VentaDeCarrosTallerModel.FK_Vehiculos_Clientes" ManuallyRouted="false" />
+        <AssociationConnector Association="VentaDeCarrosTallerModel.FK_Ventas_Clientes" ManuallyRouted="false" />
+        <AssociationConnector Association="VentaDeCarrosTallerModel.FK_DetalleFactura_DetalleRepuesto" ManuallyRouted="false" />
+        <AssociationConnector Association="VentaDeCarrosTallerModel.FK_DetalleFactura_DetalleServicio" ManuallyRouted="false" />
+        <AssociationConnector Association="VentaDeCarrosTallerModel.FK_DetalleFactura_Facturas" ManuallyRouted="false" />
+        <AssociationConnector Association="VentaDeCarrosTallerModel.FK_DetalleRepuestosOrden_Ordenes" ManuallyRouted="false" />
+        <AssociationConnector Association="VentaDeCarrosTallerModel.FK_DetalleRepuestosOrden_Repuestos" ManuallyRouted="false" />
+        <AssociationConnector Association="VentaDeCarrosTallerModel.FK_DetalleServicios_Ordenes" ManuallyRouted="false" />
+        <AssociationConnector Association="VentaDeCarrosTallerModel.FK_DetalleServicios_Servicios" ManuallyRouted="false" />
+        <AssociationConnector Association="VentaDeCarrosTallerModel.FK_OrdenesServicio_Empleados" ManuallyRouted="false" />
+        <AssociationConnector Association="VentaDeCarrosTallerModel.FK_RevisionesGarantia_Empleados" ManuallyRouted="false" />
+        <AssociationConnector Association="VentaDeCarrosTallerModel.FK_Usuario_Empleado" ManuallyRouted="false" />
+        <AssociationConnector Association="VentaDeCarrosTallerModel.FK_Facturas_OrdenesServicio" ManuallyRouted="false" />
+        <AssociationConnector Association="VentaDeCarrosTallerModel.FK_Garantias_Ventas" ManuallyRouted="false" />
+        <AssociationConnector Association="VentaDeCarrosTallerModel.FK_RevisionesGarantia_Garantias" ManuallyRouted="false" />
+        <AssociationConnector Association="VentaDeCarrosTallerModel.FK_HistorialVehiculos_Ordenes" ManuallyRouted="false" />
+        <AssociationConnector Association="VentaDeCarrosTallerModel.FK_HistorialVehiculos_Vehiculos" ManuallyRouted="false" />
+        <AssociationConnector Association="VentaDeCarrosTallerModel.FK_InventarioRepuestos_Proveedores" ManuallyRouted="false" />
+        <AssociationConnector Association="VentaDeCarrosTallerModel.FK_OrdenesServicio_Vehiculos" ManuallyRouted="false" />
+        <AssociationConnector Association="VentaDeCarrosTallerModel.FK_Usuario_Perfil" ManuallyRouted="false" />
+        <AssociationConnector Association="VentaDeCarrosTallerModel.FK_Usuario_Perfil_Perfil" ManuallyRouted="false" />
+        <AssociationConnector Association="VentaDeCarrosTallerModel.FK_ServiciosTipos_Servicios" ManuallyRouted="false" />
+        <AssociationConnector Association="VentaDeCarrosTallerModel.FK_ServiciosTipos_TiposServicio" ManuallyRouted="false" />
+        <AssociationConnector Association="VentaDeCarrosTallerModel.FK_VehiculosTallerUbicacion_Ubicaciones" ManuallyRouted="false" />
+        <AssociationConnector Association="VentaDeCarrosTallerModel.FK_Usuario_Perfil_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="VentaDeCarrosTallerModel.FK_VehiculosTallerUbicacion_Vehiculos" ManuallyRouted="false" />
+        <AssociationConnector Association="VentaDeCarrosTallerModel.FK_Ventas_Vehiculos" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

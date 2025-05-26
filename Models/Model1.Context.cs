@@ -13,10 +13,10 @@ namespace Venta_de_Carros.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class VentaDeCarrosTallerEntities1 : DbContext
+    public partial class VentaDeCarrosTallerEntities : DbContext
     {
-        public VentaDeCarrosTallerEntities1()
-            : base("name=VentaDeCarrosTallerEntities1")
+        public VentaDeCarrosTallerEntities()
+            : base("name=VentaDeCarrosTallerEntities")
         {
         }
     
@@ -25,25 +25,27 @@ namespace Venta_de_Carros.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Cliente> Clientes { get; set; }
+        public virtual DbSet<Cliente> Cliente { get; set; }
         public virtual DbSet<Detalle_Factura> Detalle_Factura { get; set; }
         public virtual DbSet<Detalle_Repuestos_Orden> Detalle_Repuestos_Orden { get; set; }
-        public virtual DbSet<Detalle_Servicios> Detalle_Servicios { get; set; }
-        public virtual DbSet<Empleado> Empleados { get; set; }
-        public virtual DbSet<Factura> Facturas { get; set; }
-        public virtual DbSet<Garantia> Garantias { get; set; }
-        public virtual DbSet<Historial_Vehiculos> Historial_Vehiculos { get; set; }
-        public virtual DbSet<Inventario_Repuestos> Inventario_Repuestos { get; set; }
+        public virtual DbSet<Detalle_Servicio> Detalle_Servicio { get; set; }
+        public virtual DbSet<Empleado> Empleado { get; set; }
+        public virtual DbSet<Factura> Factura { get; set; }
+        public virtual DbSet<Garantia> Garantia { get; set; }
+        public virtual DbSet<Historial_Vehiculo> Historial_Vehiculo { get; set; }
+        public virtual DbSet<Inventario_Repuesto> Inventario_Repuesto { get; set; }
         public virtual DbSet<Ordenes_de_Servicio> Ordenes_de_Servicio { get; set; }
-        public virtual DbSet<Proveedore> Proveedores { get; set; }
+        public virtual DbSet<Perfil> Perfils { get; set; }
+        public virtual DbSet<Proveedor> Proveedors { get; set; }
         public virtual DbSet<Revisiones_Garantia> Revisiones_Garantia { get; set; }
-        public virtual DbSet<Servicio> Servicios { get; set; }
+        public virtual DbSet<Servicio> Servicio { get; set; }
         public virtual DbSet<Servicios_Tipos> Servicios_Tipos { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Tipos_de_Servicio> Tipos_de_Servicio { get; set; }
         public virtual DbSet<Ubicaciones_Taller> Ubicaciones_Taller { get; set; }
-        public virtual DbSet<Vehiculo> Vehiculos { get; set; }
-        public virtual DbSet<Vehiculos_en_Taller_Ubicacion> Vehiculos_en_Taller_Ubicacion { get; set; }
-        public virtual DbSet<Venta> Ventas { get; set; }
+        public virtual DbSet<Usuario> Usuario { get; set; }
+        public virtual DbSet<Usuario_Perfil> Usuario_Perfil { get; set; }
+        public virtual DbSet<Vehiculo> Vehiculo { get; set; }
+        public virtual DbSet<Vehiculo_en_Taller_Ubicacion> Vehiculo_en_Taller_Ubicacion { get; set; }
+        public virtual DbSet<Venta> Venta { get; set; }
     }
 }

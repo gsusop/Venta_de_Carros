@@ -9,11 +9,11 @@ namespace Venta_de_Carros.Clases
 {
     public class clsServicio
     {
-        private VentaDeCarrosTallerEntities1 ITM_Ventas = new VentaDeCarrosTallerEntities1(); 
+        private VentaDeCarrosTallerEntities ITM_Ventas = new VentaDeCarrosTallerEntities(); 
         public Servicio Servicio { get; set; }
         public string Insertar()
         {
-            ITM_Ventas.Servicios.Add(Servicio);
+            ITM_Ventas.Servicio.Add(Servicio);
             ITM_Ventas.SaveChanges();
             return "Servicio Insertado exitosamente";
         }
@@ -25,14 +25,14 @@ namespace Venta_de_Carros.Clases
             {
                 return "El servicio no existe";
             }
-            ITM_Ventas.Servicios.AddOrUpdate(Servicio);
+            ITM_Ventas.Servicio.AddOrUpdate(Servicio);
             ITM_Ventas.SaveChanges();
             return "Se actualizó correctamente";
         }
 
         public Servicio Consultar(string IdServicio)
         {
-            Servicio serv = ITM_Ventas.Servicios.FirstOrDefault(e => e.ID_Servicio.ToString() == IdServicio.ToString());
+            Servicio serv = ITM_Ventas.Servicio.FirstOrDefault(e => e.ID_Servicio.ToString() == IdServicio.ToString());
             return serv;
         }
 
@@ -45,7 +45,7 @@ namespace Venta_de_Carros.Clases
                 {
                     return "El servicio no existe";
                 }
-                ITM_Ventas.Servicios.Remove(serv);
+                ITM_Ventas.Servicio.Remove(serv);
                 ITM_Ventas.SaveChanges();
                 return "Se eliminó el servicio exitosamente";
             }
@@ -57,7 +57,7 @@ namespace Venta_de_Carros.Clases
 
         public List<Servicio> ConsultarTodos()
         {
-            return ITM_Ventas.Servicios.ToList();
+            return ITM_Ventas.Servicio.ToList();
         }
     }
 }

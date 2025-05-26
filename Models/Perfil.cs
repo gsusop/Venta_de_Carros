@@ -12,25 +12,22 @@ namespace Venta_de_Carros.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Detalle_Servicios
+    public partial class Perfil
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Detalle_Servicios()
+        public Perfil()
         {
-            this.Detalle_Factura = new HashSet<Detalle_Factura>();
+            this.Usuarios = new HashSet<Usuario>();
+            this.Usuario_Perfil = new HashSet<Usuario_Perfil>();
         }
     
-        public int ID_Detalle_Servicio { get; set; }
-        public int ID_Orden { get; set; }
-        public int ID_Servicio { get; set; }
-        public string Descripcion_Servicio { get; set; }
-        public Nullable<decimal> Cantidad { get; set; }
-        public Nullable<decimal> Precio_Unitario { get; set; }
-        public Nullable<decimal> Subtotal { get; set; }
+        public int id { get; set; }
+        public string Nombre { get; set; }
+        public string PaginaNavegar { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Detalle_Factura> Detalle_Factura { get; set; }
-        public virtual Ordenes_de_Servicio Ordenes_de_Servicio { get; set; }
-        public virtual Servicio Servicio { get; set; }
+        public virtual ICollection<Usuario> Usuarios { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Usuario_Perfil> Usuario_Perfil { get; set; }
     }
 }

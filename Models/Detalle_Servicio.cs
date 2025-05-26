@@ -9,27 +9,34 @@
 
 namespace Venta_de_Carros.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
-    public partial class Detalle_Repuestos_Orden
+    public partial class Detalle_Servicio
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Detalle_Repuestos_Orden()
+        public Detalle_Servicio()
         {
             this.Detalle_Factura = new HashSet<Detalle_Factura>();
         }
     
-        public int ID_Detalle_Repuesto { get; set; }
+        public int ID_Detalle_Servicio { get; set; }
         public int ID_Orden { get; set; }
-        public int ID_Repuesto { get; set; }
-        public int Cantidad_Utilizada { get; set; }
+        public int ID_Servicio { get; set; }
+        public string Descripcion_Servicio { get; set; }
+        public Nullable<decimal> Cantidad { get; set; }
         public Nullable<decimal> Precio_Unitario { get; set; }
         public Nullable<decimal> Subtotal { get; set; }
-    
+
+        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Detalle_Factura> Detalle_Factura { get; set; }
+
+        [JsonIgnore]
         public virtual Ordenes_de_Servicio Ordenes_de_Servicio { get; set; }
-        public virtual Inventario_Repuesto Inventario_Repuesto { get; set; }
+
+        [JsonIgnore]
+        public virtual Servicio Servicio { get; set; }
     }
 }

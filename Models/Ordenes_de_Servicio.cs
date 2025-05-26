@@ -18,9 +18,9 @@ namespace Venta_de_Carros.Models
         public Ordenes_de_Servicio()
         {
             this.Detalle_Repuestos_Orden = new HashSet<Detalle_Repuestos_Orden>();
-            this.Detalle_Servicios = new HashSet<Detalle_Servicios>();
+            this.Detalle_Servicio = new HashSet<Detalle_Servicio>();
             this.Facturas = new HashSet<Factura>();
-            this.Historial_Vehiculos = new HashSet<Historial_Vehiculos>();
+            this.Historial_Vehiculo = new HashSet<Historial_Vehiculo>();
         }
     
         public int ID_Orden { get; set; }
@@ -38,12 +38,12 @@ namespace Venta_de_Carros.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Detalle_Repuestos_Orden> Detalle_Repuestos_Orden { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Detalle_Servicios> Detalle_Servicios { get; set; }
+        public virtual ICollection<Detalle_Servicio> Detalle_Servicio { get; set; }
         public virtual Empleado Empleado { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Factura> Facturas { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Historial_Vehiculos> Historial_Vehiculos { get; set; }
+        public virtual ICollection<Historial_Vehiculo> Historial_Vehiculo { get; set; }
         public virtual Vehiculo Vehiculo { get; set; }
     }
 }

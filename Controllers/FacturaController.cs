@@ -18,7 +18,8 @@ namespace Venta_de_Carros.Controllers
         public List<Factura> ConsultarTodos()
         {
             clsFactura Factura = new clsFactura();
-            return Factura.ConsultarTodos();
+            var data = Factura.ConsultarTodos();
+            return data;
         }
 
         [HttpGet]

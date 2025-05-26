@@ -17,7 +17,7 @@ namespace Venta_de_Carros.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Ubicaciones_Taller()
         {
-            this.Vehiculos_en_Taller_Ubicacion = new HashSet<Vehiculos_en_Taller_Ubicacion>();
+            this.Vehiculo_en_Taller_Ubicacion = new HashSet<Vehiculo_en_Taller_Ubicacion>();
         }
     
         public int ID_Ubicacion { get; set; }
@@ -26,6 +26,6 @@ namespace Venta_de_Carros.Models
         public string Ciudad { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Vehiculos_en_Taller_Ubicacion> Vehiculos_en_Taller_Ubicacion { get; set; }
+        public virtual ICollection<Vehiculo_en_Taller_Ubicacion> Vehiculo_en_Taller_Ubicacion { get; set; }
     }
 }

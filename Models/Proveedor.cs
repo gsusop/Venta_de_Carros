@@ -12,25 +12,22 @@ namespace Venta_de_Carros.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Inventario_Repuestos
+    public partial class Proveedor
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Inventario_Repuestos()
+        public Proveedor()
         {
-            this.Detalle_Repuestos_Orden = new HashSet<Detalle_Repuestos_Orden>();
+            this.Inventario_Repuesto = new HashSet<Inventario_Repuesto>();
         }
     
-        public int ID_Repuesto { get; set; }
-        public string Codigo_Repuesto { get; set; }
-        public string Nombre_Repuesto { get; set; }
-        public string Descripcion { get; set; }
-        public int Cantidad_Stock { get; set; }
-        public Nullable<decimal> Precio_Unitario { get; set; }
-        public Nullable<int> ID_Proveedor { get; set; }
-        public Nullable<System.DateTime> Fecha_Ultima_Entrada { get; set; }
+        public int ID_Proveedor { get; set; }
+        public string NIT { get; set; }
+        public string Nombre_Proveedor { get; set; }
+        public string Direccion { get; set; }
+        public string Telefono { get; set; }
+        public string Correo_Electronico { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Detalle_Repuestos_Orden> Detalle_Repuestos_Orden { get; set; }
-        public virtual Proveedore Proveedore { get; set; }
+        public virtual ICollection<Inventario_Repuesto> Inventario_Repuesto { get; set; }
     }
 }

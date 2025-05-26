@@ -9,11 +9,11 @@ namespace Venta_de_Carros.Clases
 {
     public class clsFactura
     {
-        private VentaDeCarrosTallerEntities1 ITM_Ventas = new VentaDeCarrosTallerEntities1(); // Objeto de la base de datos permite manipular el CRUD de los objetos generados
+        private VentaDeCarrosTallerEntities ITM_Ventas = new VentaDeCarrosTallerEntities(); // Objeto de la base de datos permite manipular el CRUD de los objetos generados
         public Factura Factura { get; set; }
         public string Insertar()
         {
-            ITM_Ventas.Facturas.Add(Factura);
+            ITM_Ventas.Factura.Add(Factura);
             ITM_Ventas.SaveChanges();
             return "Factura Insertada exitosamente";
         }
@@ -25,14 +25,14 @@ namespace Venta_de_Carros.Clases
             {
                 return "La factura no existe";
             }
-            ITM_Ventas.Facturas.AddOrUpdate(Factura);
+            ITM_Ventas.Factura.AddOrUpdate(Factura);
             ITM_Ventas.SaveChanges();
             return "Se actualizó correctamente";
         }
 
         public Factura Consultar(string IdFactura)
         {
-            Factura fact = ITM_Ventas.Facturas.FirstOrDefault(e => e.ID_Factura.ToString() == IdFactura.ToString());
+            Factura fact = ITM_Ventas.Factura.FirstOrDefault(e => e.ID_Factura.ToString() == IdFactura.ToString());
             return fact;
         }
 
@@ -45,7 +45,7 @@ namespace Venta_de_Carros.Clases
                 {
                     return "La factura no existe";
                 }
-                ITM_Ventas.Facturas.Remove(fact);
+                ITM_Ventas.Factura.Remove(fact);
                 ITM_Ventas.SaveChanges();
                 return "Se eliminó la factura exitosamente";
             }
@@ -57,7 +57,15 @@ namespace Venta_de_Carros.Clases
 
         public List<Factura> ConsultarTodos()
         {
-            return ITM_Ventas.Facturas.ToList();
+            try
+            {
+                return ITM_Ventas.Factura.ToList(); ;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error al consultar todas las facturas: {ex.Message}");
+                return new List<Factura>();
+            }
         }
     }
 }

@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Lenovo\\source\\repos\\Venta_de_Carros\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9C2CD61F-C545-4846-AC1F-7901AB57F59F}|Venta_de_Carros.csproj|c:\\users\\lenovo\\source\\repos\\venta_de_carros\\clases\\clsfactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C2CD61F-C545-4846-AC1F-7901AB57F59F}|Venta_de_Carros.csproj|solutionrelative:clases\\clsfactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9C2CD61F-C545-4846-AC1F-7901AB57F59F}|Venta_de_Carros.csproj|c:\\users\\lenovo\\source\\repos\\venta_de_carros\\clases\\clsdetallefactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C2CD61F-C545-4846-AC1F-7901AB57F59F}|Venta_de_Carros.csproj|solutionrelative:clases\\clsdetallefactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9C2CD61F-C545-4846-AC1F-7901AB57F59F}|Venta_de_Carros.csproj|c:\\users\\lenovo\\source\\repos\\venta_de_carros\\controllers\\facturacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C2CD61F-C545-4846-AC1F-7901AB57F59F}|Venta_de_Carros.csproj|solutionrelative:controllers\\facturacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9C2CD61F-C545-4846-AC1F-7901AB57F59F}|Venta_de_Carros.csproj|c:\\users\\lenovo\\source\\repos\\venta_de_carros\\models\\detalle_factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C2CD61F-C545-4846-AC1F-7901AB57F59F}|Venta_de_Carros.csproj|solutionrelative:models\\detalle_factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C2CD61F-C545-4846-AC1F-7901AB57F59F}|Venta_de_Carros.csproj|c:\\users\\lenovo\\source\\repos\\venta_de_carros\\controllers\\detallefacturacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C2CD61F-C545-4846-AC1F-7901AB57F59F}|Venta_de_Carros.csproj|solutionrelative:controllers\\detallefacturacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C2CD61F-C545-4846-AC1F-7901AB57F59F}|Venta_de_Carros.csproj|c:\\users\\lenovo\\source\\repos\\venta_de_carros\\controllers\\detalleserviciocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C2CD61F-C545-4846-AC1F-7901AB57F59F}|Venta_de_Carros.csproj|solutionrelative:controllers\\detalleserviciocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C2CD61F-C545-4846-AC1F-7901AB57F59F}|Venta_de_Carros.csproj|c:\\users\\lenovo\\source\\repos\\venta_de_carros\\clases\\clsdetalleservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C2CD61F-C545-4846-AC1F-7901AB57F59F}|Venta_de_Carros.csproj|solutionrelative:clases\\clsdetalleservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C2CD61F-C545-4846-AC1F-7901AB57F59F}|Venta_de_Carros.csproj|c:\\users\\lenovo\\source\\repos\\venta_de_carros\\controllers\\empleadocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C2CD61F-C545-4846-AC1F-7901AB57F59F}|Venta_de_Carros.csproj|solutionrelative:controllers\\empleadocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,28 +82,101 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FacturaController.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Venta_de_Carros\\Controllers\\FacturaController.cs",
-              "RelativeDocumentMoniker": "Controllers\\FacturaController.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Venta_de_Carros\\Controllers\\FacturaController.cs",
-              "RelativeToolTip": "Controllers\\FacturaController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAUwBUAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "DetalleFacturaController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Venta_de_Carros\\Controllers\\DetalleFacturaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DetalleFacturaController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Venta_de_Carros\\Controllers\\DetalleFacturaController.cs",
+              "RelativeToolTip": "Controllers\\DetalleFacturaController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T04:43:44.233Z",
+              "WhenOpened": "2025-05-26T04:51:35.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EmpleadoController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Venta_de_Carros\\Controllers\\EmpleadoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EmpleadoController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Venta_de_Carros\\Controllers\\EmpleadoController.cs",
+              "RelativeToolTip": "Controllers\\EmpleadoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T04:19:07.327Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DetalleServicioController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Source\\Repos\\Venta_de_Carros\\Controllers\\DetalleServicioController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DetalleServicioController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Source\\Repos\\Venta_de_Carros\\Controllers\\DetalleServicioController.cs",
+              "RelativeToolTip": "Controllers\\DetalleServicioController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T04:18:36.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "clsDetalleServicio.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Venta_de_Carros\\Clases\\clsDetalleServicio.cs",
+              "RelativeDocumentMoniker": "Clases\\clsDetalleServicio.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Venta_de_Carros\\Clases\\clsDetalleServicio.cs",
+              "RelativeToolTip": "Clases\\clsDetalleServicio.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBYAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T04:02:26.792Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "5935c646-ca38-451f-9642-51c1d852b61b",
+        "Display": 0,
+        "X": 46,
+        "Y": 50,
+        "Width": 1458,
+        "Height": 882,
+        "WindowState": 2
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Detalle_Factura.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Venta_de_Carros\\Models\\Detalle_Factura.cs",
+              "RelativeDocumentMoniker": "Models\\Detalle_Factura.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Venta_de_Carros\\Models\\Detalle_Factura.cs",
+              "RelativeToolTip": "Models\\Detalle_Factura.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAwCEAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T04:48:50.807Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "clsFactura.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Venta_de_Carros\\Clases\\clsFactura.cs",
-              "RelativeDocumentMoniker": "Clases\\clsFactura.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Venta_de_Carros\\Clases\\clsFactura.cs",
-              "RelativeToolTip": "Clases\\clsFactura.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAIwBoAAAAhAAAAAAAAAA==",
+              "Title": "clsDetalleFactura.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Venta_de_Carros\\Clases\\clsDetalleFactura.cs",
+              "RelativeDocumentMoniker": "Clases\\clsDetalleFactura.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Venta_de_Carros\\Clases\\clsDetalleFactura.cs",
+              "RelativeToolTip": "Clases\\clsDetalleFactura.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAYwBIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T04:43:37.616Z",
+              "WhenOpened": "2025-05-26T04:42:43.138Z",
               "EditorCaption": ""
             }
           ]

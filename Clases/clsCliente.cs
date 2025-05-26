@@ -9,11 +9,11 @@ namespace Venta_de_Carros.Clases
 {
     public class clsCliente
     {
-        private VentaDeCarrosTallerEntities1 ITM_Ventas = new VentaDeCarrosTallerEntities1(); // Objeto de la base de datos permite manipular el CRUD de los objetos generados
+        private VentaDeCarrosTallerEntities ITM_Ventas = new VentaDeCarrosTallerEntities(); // Objeto de la base de datos permite manipular el CRUD de los objetos generados
         public Cliente cliente { get; set; }// permite manipular o acceder a los atributos de la tabla CLIENTE
         public string Insertar()
         {
-            ITM_Ventas.Clientes.Add(cliente);// agrega un nuevo empleado a la tabla EMPLEADO (INsert Into)
+            ITM_Ventas.Cliente.Add(cliente);// agrega un nuevo empleado a la tabla EMPLEADO (INsert Into)
             ITM_Ventas.SaveChanges();//Guarda los cambios en la BD
             return "Cliente Insertado exitosamente";//Mensaje de confirmaion
         }
@@ -25,13 +25,13 @@ namespace Venta_de_Carros.Clases
             {
                 return "EL documento no existe";
             }
-            ITM_Ventas.Clientes.AddOrUpdate(cliente);//Actualiza un emplado en la tabla EMPLEADO
+            ITM_Ventas.Cliente.AddOrUpdate(cliente);//Actualiza un emplado en la tabla EMPLEADO
             ITM_Ventas.SaveChanges();
             return "Se actualizó correctamente";
         }
         public Cliente Consultar(string Documento)
         {
-            Cliente clt = ITM_Ventas.Clientes.FirstOrDefault(e => e.Numero_Documento == Documento);//consulta un cliente por su documento
+            Cliente clt = ITM_Ventas.Cliente.FirstOrDefault(e => e.Numero_Documento == Documento);//consulta un cliente por su documento
             return clt;
         }
 
@@ -44,7 +44,7 @@ namespace Venta_de_Carros.Clases
                 {
                     return "EL documento no existe";
                 }
-                ITM_Ventas.Clientes.Remove(clt);//Elimina un cliente de la tabla CLIENTE
+                ITM_Ventas.Cliente.Remove(clt);//Elimina un cliente de la tabla CLIENTE
                 ITM_Ventas.SaveChanges();//GUarda los cambios
                 return "Se eliminó el cliente exitosamente";// Mensaje de confirmacion
             }
@@ -56,7 +56,7 @@ namespace Venta_de_Carros.Clases
 
         public List<Cliente> ConsultarTodos()
         {
-            return ITM_Ventas.Clientes.ToList();
+            return ITM_Ventas.Cliente.ToList();
         }
 
     }

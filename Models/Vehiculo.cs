@@ -17,9 +17,9 @@ namespace Venta_de_Carros.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Vehiculo()
         {
-            this.Historial_Vehiculos = new HashSet<Historial_Vehiculos>();
+            this.Historial_Vehiculo = new HashSet<Historial_Vehiculo>();
             this.Ordenes_de_Servicio = new HashSet<Ordenes_de_Servicio>();
-            this.Vehiculos_en_Taller_Ubicacion = new HashSet<Vehiculos_en_Taller_Ubicacion>();
+            this.Vehiculo_en_Taller_Ubicacion = new HashSet<Vehiculo_en_Taller_Ubicacion>();
             this.Ventas = new HashSet<Venta>();
         }
     
@@ -37,11 +37,11 @@ namespace Venta_de_Carros.Models
     
         public virtual Cliente Cliente { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Historial_Vehiculos> Historial_Vehiculos { get; set; }
+        public virtual ICollection<Historial_Vehiculo> Historial_Vehiculo { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Ordenes_de_Servicio> Ordenes_de_Servicio { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Vehiculos_en_Taller_Ubicacion> Vehiculos_en_Taller_Ubicacion { get; set; }
+        public virtual ICollection<Vehiculo_en_Taller_Ubicacion> Vehiculo_en_Taller_Ubicacion { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Venta> Ventas { get; set; }
     }
