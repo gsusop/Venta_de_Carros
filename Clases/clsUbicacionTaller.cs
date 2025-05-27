@@ -9,7 +9,7 @@ namespace Venta_de_Carros.Clases
 {
     public class clsUbicaciones_Taller
     {
-        private VentaDeCarrosTallerEntities1 ITM_Ventas = new VentaDeCarrosTallerEntities1(); // Objeto de la base de datos permite manipular el CRUD de los objetos generados
+        private VentaDeCarrosTallerEntities ITM_Ventas = new VentaDeCarrosTallerEntities(); // Objeto de la base de datos permite manipular el CRUD de los objetos generados
         public Ubicaciones_Taller Ubicaciones_Taller { get; set; }// permite manipular o acceder a los atributos de la tabla Ubicaciones_Taller
         public string Insertar()
         {

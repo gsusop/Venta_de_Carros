@@ -36,7 +36,7 @@ namespace Venta_de_Carros.Models
         public virtual DbSet<Inventario_Repuesto> Inventario_Repuesto { get; set; }
         public virtual DbSet<Ordenes_de_Servicio> Ordenes_de_Servicio { get; set; }
         public virtual DbSet<Perfil> Perfils { get; set; }
-        public virtual DbSet<Proveedor> Proveedors { get; set; }
+        public virtual DbSet<Proveedor> Proveedor { get; set; }
         public virtual DbSet<Revisiones_Garantia> Revisiones_Garantia { get; set; }
         public virtual DbSet<Servicio> Servicio { get; set; }
         public virtual DbSet<Servicios_Tipos> Servicios_Tipos { get; set; }

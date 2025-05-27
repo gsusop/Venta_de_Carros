@@ -25,13 +25,13 @@ namespace Venta_de_Carros.Clases
             {
                 return "EL documento no existe";
             }
-            ITM_Ventas.Empleados.AddOrUpdate(Empleado);//Actualiza un empleado en la tabla EMPLEADO
+            ITM_Ventas.Empleado.AddOrUpdate(Empleado);//Actualiza un empleado en la tabla EMPLEADO
             ITM_Ventas.SaveChanges();
             return "Se actualizó correctamente";
         }
         public Empleado Consultar(string Documento)
         {
-            Empleado emp = ITM_Ventas.Empleados.FirstOrDefault(e => e.Numero_Documento == Documento);//consulta un Empleado por su documento
+            Empleado emp = ITM_Ventas.Empleado.FirstOrDefault(e => e.Numero_Documento == Documento);//consulta un Empleado por su documento
             return emp;
         }
 
@@ -44,7 +44,7 @@ namespace Venta_de_Carros.Clases
                 {
                     return "EL documento no existe";
                 }
-                ITM_Ventas.Empleados.Remove(emp);//Elimina un Empleado de la tabla Empleado
+                ITM_Ventas.Empleado.Remove(emp);//Elimina un Empleado de la tabla Empleado
                 ITM_Ventas.SaveChanges();//GUarda los cambios
                 return "Se eliminó el Empleado exitosamente";// Mensaje de confirmacion
             }

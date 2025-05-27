@@ -12,10 +12,10 @@ namespace Venta_de_Carros.Clases
     public class clsProveedore
     {
         // Objeto de la base de datos permite manipular el CRUD de los objetos generados
-        private VentaDeCarrosTallerEntities1 ITM_Ventas = new VentaDeCarrosTallerEntities1();
+        private VentaDeCarrosTallerEntities ITM_Ventas = new VentaDeCarrosTallerEntities();
 
         // Permite manipular o acceder a los atributos de la tabla Proveedore
-        public Proveedore Proveedore { get; set; }
+        public Proveedor Proveedor { get; set; }
 
         /// <summary>
         /// Inserta un nuevo proveedor en la base de datos.
@@ -25,7 +25,7 @@ namespace Venta_de_Carros.Clases
         {
             try
             {
-                ITM_Ventas.Proveedores.Add(Proveedore); // Agrega un nuevo proveedor a la tabla Proveedores
+                ITM_Ventas.Proveedor.Add(Proveedor); // Agrega un nuevo proveedor a la tabla Proveedores
                 ITM_Ventas.SaveChanges(); // Guarda los cambios en la BD
                 return "Proveedore insertado exitosamente"; // Mensaje de confirmación
             }
@@ -50,13 +50,13 @@ namespace Venta_de_Carros.Clases
             try
             {
                 // Consultamos el proveedor por su NIT para verificar si existe
-                Proveedore prv = Consultar(Proveedore.NIT);
+                Proveedor prv = Consultar(Proveedor.NIT);
                 if (prv == null)
                 {
                     return "El proveedore no existe"; // Mensaje si el proveedor no se encuentra
                 }
                 // Actualiza un proveedor en la tabla PROVEEDORES
-                ITM_Ventas.Proveedores.AddOrUpdate(Proveedore);
+                ITM_Ventas.Proveedor.AddOrUpdate(Proveedor);
                 ITM_Ventas.SaveChanges(); // Guarda los cambios
                 return "Se actualizó el proveedore correctamente"; // Mensaje de confirmación
             }
@@ -77,10 +77,10 @@ namespace Venta_de_Carros.Clases
         /// </summary>
         /// <param name="nit">El NIT del proveedor a consultar.</param>
         /// <returns>El objeto Proveedore si se encuentra, de lo contrario, null.</returns>
-        public Proveedore Consultar(string nit)
+        public Proveedor Consultar(string nit)
         {
             // Consulta un proveedor por su NIT
-            Proveedore prv = ITM_Ventas.Proveedores.FirstOrDefault(e => e.NIT == nit);
+            Proveedor prv = ITM_Ventas.Proveedor.FirstOrDefault(e => e.NIT == nit);
             return prv;
         }
 
@@ -94,13 +94,13 @@ namespace Venta_de_Carros.Clases
             try
             {
                 // Consultamos el proveedor por su NIT para verificar si existe
-                Proveedore prv = Consultar(nit);
+                Proveedor prv = Consultar(nit);
                 if (prv == null)
                 {
                     return "El proveedore no existe"; // Mensaje si el proveedor no se encuentra
                 }
                 // Elimina un proveedor de la tabla Proveedores
-                ITM_Ventas.Proveedores.Remove(prv);
+                ITM_Ventas.Proveedor.Remove(prv);
                 ITM_Ventas.SaveChanges(); // Guarda los cambios
                 return "Se eliminó el proveedore exitosamente"; // Mensaje de confirmación
             }
@@ -125,9 +125,9 @@ namespace Venta_de_Carros.Clases
         /// Consulta todos los proveedores en la base de datos.
         /// </summary>
         /// <returns>Una lista de todos los proveedores.</returns>
-        public List<Proveedore> ConsultarTodos()
+        public List<Proveedor> ConsultarTodos()
         {
-            return ITM_Ventas.Proveedores.ToList();
+            return ITM_Ventas.Proveedor.ToList();
         }
     }
 }

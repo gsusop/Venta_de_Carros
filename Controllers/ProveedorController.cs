@@ -20,7 +20,7 @@ namespace Venta_de_Carros.Controllers
             /// <returns>Una lista de proveedores.</returns>
             [HttpGet]
             [Route("ConsultarTodos")]
-            public List<Proveedore> ConsultarTodos() // El tipo de retorno es Proveedore
+            public List<Proveedor> ConsultarTodos() // El tipo de retorno es Proveedore
             {
                 clsProveedore proveedoreClase = new clsProveedore(); // Instanciamos clsProveedore
                 return proveedoreClase.ConsultarTodos();
@@ -34,7 +34,7 @@ namespace Venta_de_Carros.Controllers
             [HttpGet]
             // Usamos {nit} en la ruta para indicar que es un parámetro de la URL
             [Route("ConsultarPorNit/{nit}")]
-            public Proveedore ConsultarPorNit([FromUri] string nit) // El tipo de retorno es Proveedore
+            public Proveedor ConsultarPorNit([FromUri] string nit) // El tipo de retorno es Proveedore
             {
                 clsProveedore proveedoreClase = new clsProveedore(); // Instanciamos clsProveedore
                 return proveedoreClase.Consultar(nit);
@@ -47,10 +47,10 @@ namespace Venta_de_Carros.Controllers
             /// <returns>Mensaje de confirmación o error.</returns>
             [HttpPost]
             [Route("Insertar")]
-            public string Insertar([FromBody] Proveedore nuevoProveedore) // El parámetro es de tipo Proveedore
+            public string Insertar([FromBody] Proveedor nuevoProveedore) // El parámetro es de tipo Proveedore
             {
                 clsProveedore proveedoreClase = new clsProveedore(); // Instanciamos clsProveedore
-                proveedoreClase.Proveedore = nuevoProveedore; // Asignamos el objeto a la propiedad de la clase
+                proveedoreClase.Proveedor = nuevoProveedore; // Asignamos el objeto a la propiedad de la clase
                 return proveedoreClase.Insertar();
             }
 
@@ -61,10 +61,10 @@ namespace Venta_de_Carros.Controllers
             /// <returns>Mensaje de confirmación o error.</returns>
             [HttpPut]
             [Route("Actualizar")]
-            public string Actualizar([FromBody] Proveedore proveedoreActualizado) // El parámetro es de tipo Proveedore
+            public string Actualizar([FromBody] Proveedor proveedoreActualizado) // El parámetro es de tipo Proveedore
             {
                 clsProveedore proveedoreClase = new clsProveedore(); // Instanciamos clsProveedore
-                proveedoreClase.Proveedore = proveedoreActualizado; // Asignamos el objeto a la propiedad de la clase
+                proveedoreClase.Proveedor = proveedoreActualizado; // Asignamos el objeto a la propiedad de la clase
                 return proveedoreClase.Actualizar();
             }
 
