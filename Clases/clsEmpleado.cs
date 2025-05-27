@@ -9,11 +9,11 @@ namespace Venta_de_Carros.Clases
 {
     public class clsEmpleado
     {
-        private VentaDeCarrosTallerEntities1 ITM_Ventas = new VentaDeCarrosTallerEntities1(); // Objeto de la base de datos permite manipular el CRUD de los objetos generados
+        private VentaDeCarrosTallerEntities ITM_Ventas = new VentaDeCarrosTallerEntities(); // Objeto de la base de datos permite manipular el CRUD de los objetos generados
         public Empleado Empleado { get; set; }// permite manipular o acceder a los atributos de la tabla Empleado
         public string Insertar()
         {
-            ITM_Ventas.Empleados.Add(Empleado);// agrega un nuevo empleado a la tabla EMPLEADO (INsert Into)
+            ITM_Ventas.Empleado.Add(Empleado);// agrega un nuevo empleado a la tabla EMPLEADO (INsert Into)
             ITM_Ventas.SaveChanges();//Guarda los cambios en la BD
             return "Empleado Insertado exitosamente";//Mensaje de confirmaion
         }
@@ -25,13 +25,13 @@ namespace Venta_de_Carros.Clases
             {
                 return "EL documento no existe";
             }
-            ITM_Ventas.Empleados.AddOrUpdate(Empleado);//Actualiza un empleado en la tabla EMPLEADO
+            ITM_Ventas.Empleado.AddOrUpdate(Empleado);//Actualiza un empleado en la tabla EMPLEADO
             ITM_Ventas.SaveChanges();
             return "Se actualizó correctamente";
         }
         public Empleado Consultar(string Documento)
         {
-            Empleado emp = ITM_Ventas.Empleados.FirstOrDefault(e => e.Numero_Documento == Documento);//consulta un Empleado por su documento
+            Empleado emp = ITM_Ventas.Empleado.FirstOrDefault(e => e.Numero_Documento == Documento);//consulta un Empleado por su documento
             return emp;
         }
 
@@ -44,7 +44,7 @@ namespace Venta_de_Carros.Clases
                 {
                     return "EL documento no existe";
                 }
-                ITM_Ventas.Empleados.Remove(emp);//Elimina un Empleado de la tabla Empleado
+                ITM_Ventas.Empleado.Remove(emp);//Elimina un Empleado de la tabla Empleado
                 ITM_Ventas.SaveChanges();//GUarda los cambios
                 return "Se eliminó el Empleado exitosamente";// Mensaje de confirmacion
             }
@@ -56,7 +56,7 @@ namespace Venta_de_Carros.Clases
 
         public List<Empleado> ConsultarTodos()
         {
-            return ITM_Ventas.Empleados.ToList();
+            return ITM_Ventas.Empleado.ToList();
         }
 
     }

@@ -30,6 +30,6 @@ namespace Venta_de_Carros.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Detalle_Factura> Detalle_Factura { get; set; }
         public virtual Ordenes_de_Servicio Ordenes_de_Servicio { get; set; }
-        public virtual Inventario_Repuestos Inventario_Repuestos { get; set; }
+        public virtual Inventario_Repuesto Inventario_Repuesto { get; set; }
     }
 }

@@ -9,7 +9,6 @@
 
 namespace Venta_de_Carros.Models
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -18,7 +17,7 @@ namespace Venta_de_Carros.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Cliente()
         {
-            this.Vehiculos = new HashSet<Vehiculo>();
+            this.Vehiculoes = new HashSet<Vehiculo>();
             this.Ventas = new HashSet<Venta>();
         }
     
@@ -29,10 +28,9 @@ namespace Venta_de_Carros.Models
         public string Direccion { get; set; }
         public string Telefono { get; set; }
         public string Correo_Electronico { get; set; }
-        [JsonIgnore]
+    
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Vehiculo> Vehiculos { get; set; }
-        [JsonIgnore]
+        public virtual ICollection<Vehiculo> Vehiculoes { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Venta> Ventas { get; set; }
     }
