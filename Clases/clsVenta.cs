@@ -14,8 +14,8 @@ namespace Venta_de_Carros.Clases
 
         public List<Venta> ConsultarTodos()
         {
-            var data = ITM_Ventas.Venta.ToList();
-            return data;
+            
+            return ITM_Ventas.Venta.ToList();
         }
 
         public Venta Consultar(string idventa)

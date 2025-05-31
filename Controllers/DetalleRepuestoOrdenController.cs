@@ -9,7 +9,7 @@ using Venta_de_Carros.Models;
 
 namespace Venta_de_Carros.Controllers
 {
-    [RoutePrefix("api/DetalleRepuestosOrden")]
+    [RoutePrefix("api/DetalleRepuestoOrden")]
     public class DetalleRepuestoOrdenController : ApiController
     {
         [HttpGet]
@@ -57,25 +57,6 @@ namespace Venta_de_Carros.Controllers
 
 
     }
-
-
-
-
-
-
-
-
-
-   
-
-
-           
-
-
-
-
-
-
 
 }
 

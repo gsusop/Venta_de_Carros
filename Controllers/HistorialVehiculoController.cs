@@ -17,8 +17,8 @@ namespace Venta_de_Carros.Controllers
         public List<Historial_Vehiculo> ConsultarTodos()
         {
             clsHistorialVehiculo histVeh = new clsHistorialVehiculo();
-            var data = histVeh.ConsultarTodos();
-            return data;
+          //  var data = histVeh.ConsultarTodos();
+            return histVeh.ConsultarTodos();
         }
 
         [HttpGet]
@@ -32,10 +32,10 @@ namespace Venta_de_Carros.Controllers
 
         [HttpPost]
         [Route("Insertar")]
-        public string Insertar([FromBody] Historial_Vehiculo factu) 
+        public string Insertar([FromBody] Historial_Vehiculo histoveh) 
         {
             clsHistorialVehiculo histVeh = new clsHistorialVehiculo();
-            histVeh.Historial_Vehiculo = factu; 
+            histVeh.Historial_Vehiculo = histoveh; 
             return histVeh.Insertar();
         }
 

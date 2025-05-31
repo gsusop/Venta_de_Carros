@@ -12,10 +12,12 @@ namespace Venta_de_Carros.Clases
         private VentaDeCarrosTallerEntities ITM_Ventas = new VentaDeCarrosTallerEntities();
         public Historial_Vehiculo Historial_Vehiculo { get; set; }
 
+
         public List<Historial_Vehiculo> ConsultarTodos()
         {
             return ITM_Ventas.Historial_Vehiculo.ToList();
         }
+
 
         public string Insertar()
         {

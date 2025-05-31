@@ -59,5 +59,7 @@ namespace Venta_de_Carros.Clases
             return ITM_Ventas.Cliente.ToList();
         }
 
+      
+
     }
 }

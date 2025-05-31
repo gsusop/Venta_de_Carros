@@ -35,6 +35,8 @@ namespace Venta_de_Carros.Models
         public System.DateTime Fecha_Ingreso { get; set; }
         public Nullable<System.DateTime> Fecha_Salida { get; set; }
         public string Estado_Vehiculo { get; set; }
+
+
         [JsonIgnore]
         public virtual Cliente Cliente { get; set; }
 

@@ -17,8 +17,9 @@ namespace Venta_de_Carros.Controllers
         [Route("ConsultarTodos")]
         public List<Venta> ConsultarTodos()
         {
-            clsVenta Venta = new clsVenta();
-            return Venta.ConsultarTodos();
+            clsVenta detVenta = new clsVenta();
+            var data = detVenta.ConsultarTodos();
+            return data;
         }
 
         [HttpGet]
