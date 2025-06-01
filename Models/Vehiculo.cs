@@ -34,14 +34,24 @@ namespace Venta_de_Carros.Models
         public System.DateTime Fecha_Ingreso { get; set; }
         public Nullable<System.DateTime> Fecha_Salida { get; set; }
         public string Estado_Vehiculo { get; set; }
-    
+
+
+        [JsonIgnore]
         public virtual Cliente Cliente { get; set; }
+
+        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Historial_Vehiculo> Historial_Vehiculo { get; set; }
+
+        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Ordenes_de_Servicio> Ordenes_de_Servicio { get; set; }
+
+        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Vehiculo_en_Taller_Ubicacion> Vehiculo_en_Taller_Ubicacion { get; set; }
+
+        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Venta> Venta { get; set; }
     }

@@ -9,6 +9,7 @@
 
 namespace Venta_de_Carros.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -19,8 +20,11 @@ namespace Venta_de_Carros.Models
         public int ID_Orden { get; set; }
         public System.DateTime Fecha_Visita { get; set; }
         public string Descripcion_Problema { get; set; }
-    
+
+        [JsonIgnore]
         public virtual Ordenes_de_Servicio Ordenes_de_Servicio { get; set; }
+
+        [JsonIgnore]
         public virtual Vehiculo Vehiculo { get; set; }
     }
 }
