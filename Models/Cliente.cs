@@ -18,8 +18,8 @@ namespace Venta_de_Carros.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Cliente()
         {
-            this.Vehiculoes = new HashSet<Vehiculo>();
-            this.Ventas = new HashSet<Venta>();
+            this.Vehiculo = new HashSet<Vehiculo>();
+            this.Venta = new HashSet<Venta>();
         }
     
         public int ID_Cliente { get; set; }
@@ -36,6 +36,6 @@ namespace Venta_de_Carros.Models
 
         [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Venta> Ventas { get; set; }
+        public virtual ICollection<Venta> Venta { get; set; }
     }
 }

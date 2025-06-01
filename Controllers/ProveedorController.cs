@@ -7,12 +7,12 @@ using Venta_de_Carros.Models;
 
 namespace Venta_de_Carros.Controllers
 {
+    [RoutePrefix("api/Proveedores")]
+    [Authorize]
     // La clase del controlador debe heredar de ApiController
-    public class ProveedorController : ApiController
-    {
-        // Renombramos la ruta para que sea consistente con el plural de la tabla
-        [RoutePrefix("api/Proveedores")]
-        public class ProveedoresController : ApiController
+    // Renombramos la ruta para que sea consistente con el plural de la tabla
+
+    public class ProveedoresController : ApiController
         {
             /// <summary>
             /// Consulta todos los proveedores.
@@ -82,5 +82,5 @@ namespace Venta_de_Carros.Controllers
                 return proveedoreClase.Eliminar(nit); // Pasamos el NIT al método de la clase
             }
         }
-    }
+    
 }

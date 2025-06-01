@@ -9,10 +9,9 @@
 
 namespace Venta_de_Carros.Models
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
-
+    
     public partial class Garantia
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -20,7 +19,7 @@ namespace Venta_de_Carros.Models
         {
             this.Revisiones_Garantia = new HashSet<Revisiones_Garantia>();
         }
-
+    
         public int ID_Garantia { get; set; }
         public int ID_Vehiculo_Vendido { get; set; }
         public System.DateTime Fecha_Inicio_Garantia { get; set; }

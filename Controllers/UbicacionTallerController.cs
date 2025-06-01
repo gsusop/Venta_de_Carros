@@ -8,10 +8,10 @@ using Venta_de_Carros.Models;
 
 namespace Venta_de_Carros.Controllers
 {
-    public class Ubicaciones_TallerController
-    {
-        [RoutePrefix("api/UbicacionesTalleres")]
-        public class Ubicaciones_TallersController : ApiController
+    [RoutePrefix("api/UbicacionesTalleres")]
+    [Authorize]
+
+    public class Ubicaciones_TallersController : ApiController
         {
             // GET api/<controller>
             [HttpGet]
@@ -60,5 +60,5 @@ namespace Venta_de_Carros.Controllers
                 return Ubicaciones_TallerClase.Eliminar();
             }
         }
-    }
+    
 }

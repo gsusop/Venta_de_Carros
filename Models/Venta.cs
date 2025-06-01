@@ -18,7 +18,7 @@ namespace Venta_de_Carros.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Venta()
         {
-            this.Garantias = new HashSet<Garantia>();
+            this.Garantia = new HashSet<Garantia>();
         }
     
         public int ID_Venta { get; set; }
@@ -34,7 +34,7 @@ namespace Venta_de_Carros.Models
 
         [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Garantia> Garantias { get; set; }
+        public virtual ICollection<Garantia> Garantia { get; set; }
 
         [JsonIgnore]
         public virtual Vehiculo Vehiculo { get; set; }

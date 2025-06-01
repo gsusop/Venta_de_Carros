@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using Venta_de_Carros.Clases;
 
 namespace Venta_de_Carros
 {
@@ -11,6 +12,7 @@ namespace Venta_de_Carros
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
+            config.MessageHandlers.Add(new TokenValidationHandler());
 
             // Web API routes
             config.MapHttpAttributeRoutes();
@@ -22,8 +24,8 @@ namespace Venta_de_Carros
             );
 
 
-            var json = config.Formatters.JsonFormatter;
-            json.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+            //var json = config.Formatters.JsonFormatter;
+            config.Formatters.JsonFormatter.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
 
         }
     }

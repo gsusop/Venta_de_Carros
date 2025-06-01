@@ -9,7 +9,6 @@
 
 namespace Venta_de_Carros.Models
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -33,11 +32,7 @@ namespace Venta_de_Carros.Models
         public string Comentarios { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-
-        [JsonIgnore]
         public virtual ICollection<Detalle_Factura> Detalle_Factura { get; set; }
-
-        [JsonIgnore]
         public virtual Ordenes_de_Servicio Ordenes_de_Servicio { get; set; }
     }
 }

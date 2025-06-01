@@ -9,7 +9,6 @@
 
 namespace Venta_de_Carros.Models
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -21,7 +20,7 @@ namespace Venta_de_Carros.Models
             this.Historial_Vehiculo = new HashSet<Historial_Vehiculo>();
             this.Ordenes_de_Servicio = new HashSet<Ordenes_de_Servicio>();
             this.Vehiculo_en_Taller_Ubicacion = new HashSet<Vehiculo_en_Taller_Ubicacion>();
-            this.Ventas = new HashSet<Venta>();
+            this.Venta = new HashSet<Venta>();
         }
     
         public int ID_Vehiculo { get; set; }
@@ -54,6 +53,6 @@ namespace Venta_de_Carros.Models
 
         [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Venta> Ventas { get; set; }
+        public virtual ICollection<Venta> Venta { get; set; }
     }
 }

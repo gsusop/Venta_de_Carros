@@ -202,7 +202,6 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="idEmpleado" Type="int" Nullable="false" />
-          <Property Name="idPerfil" Type="int" Nullable="false" />
           <Property Name="userName" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Clave" Type="nvarchar" MaxLength="2000" Nullable="false" />
           <Property Name="Salt" Type="nvarchar" MaxLength="2000" />
@@ -480,18 +479,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Usuario_Perfil">
-          <End Role="Perfil" Type="Self.Perfil" Multiplicity="1" />
-          <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Perfil">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="Usuario">
-              <PropertyRef Name="idPerfil" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Usuario_Perfil_Perfil">
           <End Role="Perfil" Type="Self.Perfil" Multiplicity="1" />
           <End Role="Usuario_Perfil" Type="Self.Usuario_Perfil" Multiplicity="*" />
@@ -675,10 +662,6 @@
             <End Role="Empleado" EntitySet="Empleado" />
             <End Role="Usuario" EntitySet="Usuario" />
           </AssociationSet>
-          <AssociationSet Name="FK_Usuario_Perfil" Association="Self.FK_Usuario_Perfil">
-            <End Role="Perfil" EntitySet="Perfil" />
-            <End Role="Usuario" EntitySet="Usuario" />
-          </AssociationSet>
           <AssociationSet Name="FK_Usuario_Perfil_Perfil" Association="Self.FK_Usuario_Perfil_Perfil">
             <End Role="Perfil" EntitySet="Perfil" />
             <End Role="Usuario_Perfil" EntitySet="Usuario_Perfil" />
@@ -724,8 +707,8 @@
           <Property Name="Direccion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="Correo_Electronico" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Vehiculoes" Relationship="Self.FK_Vehiculos_Clientes" FromRole="Cliente" ToRole="Vehiculo" />
-          <NavigationProperty Name="Ventas" Relationship="Self.FK_Ventas_Clientes" FromRole="Cliente" ToRole="Venta" />
+          <NavigationProperty Name="Vehiculo" Relationship="Self.FK_Vehiculos_Clientes" FromRole="Cliente" ToRole="Vehiculo" />
+          <NavigationProperty Name="Venta" Relationship="Self.FK_Ventas_Clientes" FromRole="Cliente" ToRole="Venta" />
         </EntityType>
         <EntityType Name="Detalle_Factura">
           <Key>
@@ -786,7 +769,7 @@
           <Property Name="Correo_Electronico" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Ordenes_de_Servicio" Relationship="Self.FK_OrdenesServicio_Empleados" FromRole="Empleado" ToRole="Ordenes_de_Servicio" />
           <NavigationProperty Name="Revisiones_Garantia" Relationship="Self.FK_RevisionesGarantia_Empleados" FromRole="Empleado" ToRole="Revisiones_Garantia" />
-          <NavigationProperty Name="Usuarios" Relationship="Self.FK_Usuario_Empleado" FromRole="Empleado" ToRole="Usuario" />
+          <NavigationProperty Name="Usuario" Relationship="Self.FK_Usuario_Empleado" FromRole="Empleado" ToRole="Usuario" />
         </EntityType>
         <EntityType Name="Factura">
           <Key>
@@ -865,7 +848,7 @@
           <NavigationProperty Name="Detalle_Repuestos_Orden" Relationship="Self.FK_DetalleRepuestosOrden_Ordenes" FromRole="Ordenes_de_Servicio" ToRole="Detalle_Repuestos_Orden" />
           <NavigationProperty Name="Detalle_Servicio" Relationship="Self.FK_DetalleServicios_Ordenes" FromRole="Ordenes_de_Servicio" ToRole="Detalle_Servicio" />
           <NavigationProperty Name="Empleado" Relationship="Self.FK_OrdenesServicio_Empleados" FromRole="Ordenes_de_Servicio" ToRole="Empleado" />
-          <NavigationProperty Name="Facturas" Relationship="Self.FK_Facturas_OrdenesServicio" FromRole="Ordenes_de_Servicio" ToRole="Factura" />
+          <NavigationProperty Name="Factura" Relationship="Self.FK_Facturas_OrdenesServicio" FromRole="Ordenes_de_Servicio" ToRole="Factura" />
           <NavigationProperty Name="Historial_Vehiculo" Relationship="Self.FK_HistorialVehiculos_Ordenes" FromRole="Ordenes_de_Servicio" ToRole="Historial_Vehiculo" />
           <NavigationProperty Name="Vehiculo" Relationship="Self.FK_OrdenesServicio_Vehiculos" FromRole="Ordenes_de_Servicio" ToRole="Vehiculo" />
         </EntityType>
@@ -876,7 +859,6 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="PaginaNavegar" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Usuarios" Relationship="Self.FK_Usuario_Perfil" FromRole="Perfil" ToRole="Usuario" />
           <NavigationProperty Name="Usuario_Perfil" Relationship="Self.FK_Usuario_Perfil_Perfil" FromRole="Perfil" ToRole="Usuario_Perfil" />
         </EntityType>
         <EntityType Name="Proveedor">
@@ -949,12 +931,10 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="idEmpleado" Type="Int32" Nullable="false" />
-          <Property Name="idPerfil" Type="Int32" Nullable="false" />
           <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Clave" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Salt" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Empleado" Relationship="Self.FK_Usuario_Empleado" FromRole="Usuario" ToRole="Empleado" />
-          <NavigationProperty Name="Perfil" Relationship="Self.FK_Usuario_Perfil" FromRole="Usuario" ToRole="Perfil" />
           <NavigationProperty Name="Usuario_Perfil" Relationship="Self.FK_Usuario_Perfil_Usuario" FromRole="Usuario" ToRole="Usuario_Perfil" />
         </EntityType>
         <EntityType Name="Usuario_Perfil">
@@ -987,7 +967,7 @@
           <NavigationProperty Name="Historial_Vehiculo" Relationship="Self.FK_HistorialVehiculos_Vehiculos" FromRole="Vehiculo" ToRole="Historial_Vehiculo" />
           <NavigationProperty Name="Ordenes_de_Servicio" Relationship="Self.FK_OrdenesServicio_Vehiculos" FromRole="Vehiculo" ToRole="Ordenes_de_Servicio" />
           <NavigationProperty Name="Vehiculo_en_Taller_Ubicacion" Relationship="Self.FK_VehiculosTallerUbicacion_Vehiculos" FromRole="Vehiculo" ToRole="Vehiculo_en_Taller_Ubicacion" />
-          <NavigationProperty Name="Ventas" Relationship="Self.FK_Ventas_Vehiculos" FromRole="Vehiculo" ToRole="Venta" />
+          <NavigationProperty Name="Venta" Relationship="Self.FK_Ventas_Vehiculos" FromRole="Vehiculo" ToRole="Venta" />
         </EntityType>
         <EntityType Name="Vehiculo_en_Taller_Ubicacion">
           <Key>
@@ -1011,7 +991,7 @@
           <Property Name="Precio_Venta" Type="Decimal" Precision="12" Scale="2" />
           <Property Name="Numero_Factura_Venta" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Cliente" Relationship="Self.FK_Ventas_Clientes" FromRole="Venta" ToRole="Cliente" />
-          <NavigationProperty Name="Garantias" Relationship="Self.FK_Garantias_Ventas" FromRole="Venta" ToRole="Garantia" />
+          <NavigationProperty Name="Garantia" Relationship="Self.FK_Garantias_Ventas" FromRole="Venta" ToRole="Garantia" />
           <NavigationProperty Name="Vehiculo" Relationship="Self.FK_Ventas_Vehiculos" FromRole="Venta" ToRole="Vehiculo" />
         </EntityType>
         <Association Name="FK_Vehiculos_Clientes">
@@ -1242,18 +1222,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Usuario_Perfil">
-          <End Role="Perfil" Type="Self.Perfil" Multiplicity="1" />
-          <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Perfil">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="Usuario">
-              <PropertyRef Name="idPerfil" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Usuario_Perfil_Perfil">
           <End Role="Perfil" Type="Self.Perfil" Multiplicity="1" />
           <End Role="Usuario_Perfil" Type="Self.Usuario_Perfil" Multiplicity="*" />
@@ -1339,35 +1307,35 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="VentaDeCarrosTallerEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Clientes" EntityType="Self.Cliente" />
+          <EntitySet Name="Cliente" EntityType="Self.Cliente" />
           <EntitySet Name="Detalle_Factura" EntityType="Self.Detalle_Factura" />
           <EntitySet Name="Detalle_Repuestos_Orden" EntityType="Self.Detalle_Repuestos_Orden" />
           <EntitySet Name="Detalle_Servicio" EntityType="Self.Detalle_Servicio" />
-          <EntitySet Name="Empleadoes" EntityType="Self.Empleado" />
-          <EntitySet Name="Facturas" EntityType="Self.Factura" />
-          <EntitySet Name="Garantias" EntityType="Self.Garantia" />
+          <EntitySet Name="Empleado" EntityType="Self.Empleado" />
+          <EntitySet Name="Factura" EntityType="Self.Factura" />
+          <EntitySet Name="Garantia" EntityType="Self.Garantia" />
           <EntitySet Name="Historial_Vehiculo" EntityType="Self.Historial_Vehiculo" />
           <EntitySet Name="Inventario_Repuesto" EntityType="Self.Inventario_Repuesto" />
           <EntitySet Name="Ordenes_de_Servicio" EntityType="Self.Ordenes_de_Servicio" />
-          <EntitySet Name="Perfils" EntityType="Self.Perfil" />
-          <EntitySet Name="Proveedors" EntityType="Self.Proveedor" />
+          <EntitySet Name="Perfil" EntityType="Self.Perfil" />
+          <EntitySet Name="Proveedor" EntityType="Self.Proveedor" />
           <EntitySet Name="Revisiones_Garantia" EntityType="Self.Revisiones_Garantia" />
-          <EntitySet Name="Servicios" EntityType="Self.Servicio" />
+          <EntitySet Name="Servicio" EntityType="Self.Servicio" />
           <EntitySet Name="Servicios_Tipos" EntityType="Self.Servicios_Tipos" />
           <EntitySet Name="Tipos_de_Servicio" EntityType="Self.Tipos_de_Servicio" />
           <EntitySet Name="Ubicaciones_Taller" EntityType="Self.Ubicaciones_Taller" />
-          <EntitySet Name="Usuarios" EntityType="Self.Usuario" />
+          <EntitySet Name="Usuario" EntityType="Self.Usuario" />
           <EntitySet Name="Usuario_Perfil" EntityType="Self.Usuario_Perfil" />
-          <EntitySet Name="Vehiculoes" EntityType="Self.Vehiculo" />
+          <EntitySet Name="Vehiculo" EntityType="Self.Vehiculo" />
           <EntitySet Name="Vehiculo_en_Taller_Ubicacion" EntityType="Self.Vehiculo_en_Taller_Ubicacion" />
-          <EntitySet Name="Ventas" EntityType="Self.Venta" />
+          <EntitySet Name="Venta" EntityType="Self.Venta" />
           <AssociationSet Name="FK_Vehiculos_Clientes" Association="Self.FK_Vehiculos_Clientes">
-            <End Role="Cliente" EntitySet="Clientes" />
-            <End Role="Vehiculo" EntitySet="Vehiculoes" />
+            <End Role="Cliente" EntitySet="Cliente" />
+            <End Role="Vehiculo" EntitySet="Vehiculo" />
           </AssociationSet>
           <AssociationSet Name="FK_Ventas_Clientes" Association="Self.FK_Ventas_Clientes">
-            <End Role="Cliente" EntitySet="Clientes" />
-            <End Role="Venta" EntitySet="Ventas" />
+            <End Role="Cliente" EntitySet="Cliente" />
+            <End Role="Venta" EntitySet="Venta" />
           </AssociationSet>
           <AssociationSet Name="FK_DetalleFactura_DetalleRepuesto" Association="Self.FK_DetalleFactura_DetalleRepuesto">
             <End Role="Detalle_Repuestos_Orden" EntitySet="Detalle_Repuestos_Orden" />
@@ -1378,7 +1346,7 @@
             <End Role="Detalle_Factura" EntitySet="Detalle_Factura" />
           </AssociationSet>
           <AssociationSet Name="FK_DetalleFactura_Facturas" Association="Self.FK_DetalleFactura_Facturas">
-            <End Role="Factura" EntitySet="Facturas" />
+            <End Role="Factura" EntitySet="Factura" />
             <End Role="Detalle_Factura" EntitySet="Detalle_Factura" />
           </AssociationSet>
           <AssociationSet Name="FK_DetalleRepuestosOrden_Ordenes" Association="Self.FK_DetalleRepuestosOrden_Ordenes">
@@ -1394,31 +1362,31 @@
             <End Role="Detalle_Servicio" EntitySet="Detalle_Servicio" />
           </AssociationSet>
           <AssociationSet Name="FK_DetalleServicios_Servicios" Association="Self.FK_DetalleServicios_Servicios">
-            <End Role="Servicio" EntitySet="Servicios" />
+            <End Role="Servicio" EntitySet="Servicio" />
             <End Role="Detalle_Servicio" EntitySet="Detalle_Servicio" />
           </AssociationSet>
           <AssociationSet Name="FK_OrdenesServicio_Empleados" Association="Self.FK_OrdenesServicio_Empleados">
-            <End Role="Empleado" EntitySet="Empleadoes" />
+            <End Role="Empleado" EntitySet="Empleado" />
             <End Role="Ordenes_de_Servicio" EntitySet="Ordenes_de_Servicio" />
           </AssociationSet>
           <AssociationSet Name="FK_RevisionesGarantia_Empleados" Association="Self.FK_RevisionesGarantia_Empleados">
-            <End Role="Empleado" EntitySet="Empleadoes" />
+            <End Role="Empleado" EntitySet="Empleado" />
             <End Role="Revisiones_Garantia" EntitySet="Revisiones_Garantia" />
           </AssociationSet>
           <AssociationSet Name="FK_Usuario_Empleado" Association="Self.FK_Usuario_Empleado">
-            <End Role="Empleado" EntitySet="Empleadoes" />
-            <End Role="Usuario" EntitySet="Usuarios" />
+            <End Role="Empleado" EntitySet="Empleado" />
+            <End Role="Usuario" EntitySet="Usuario" />
           </AssociationSet>
           <AssociationSet Name="FK_Facturas_OrdenesServicio" Association="Self.FK_Facturas_OrdenesServicio">
             <End Role="Ordenes_de_Servicio" EntitySet="Ordenes_de_Servicio" />
-            <End Role="Factura" EntitySet="Facturas" />
+            <End Role="Factura" EntitySet="Factura" />
           </AssociationSet>
           <AssociationSet Name="FK_Garantias_Ventas" Association="Self.FK_Garantias_Ventas">
-            <End Role="Venta" EntitySet="Ventas" />
-            <End Role="Garantia" EntitySet="Garantias" />
+            <End Role="Venta" EntitySet="Venta" />
+            <End Role="Garantia" EntitySet="Garantia" />
           </AssociationSet>
           <AssociationSet Name="FK_RevisionesGarantia_Garantias" Association="Self.FK_RevisionesGarantia_Garantias">
-            <End Role="Garantia" EntitySet="Garantias" />
+            <End Role="Garantia" EntitySet="Garantia" />
             <End Role="Revisiones_Garantia" EntitySet="Revisiones_Garantia" />
           </AssociationSet>
           <AssociationSet Name="FK_HistorialVehiculos_Ordenes" Association="Self.FK_HistorialVehiculos_Ordenes">
@@ -1426,27 +1394,23 @@
             <End Role="Historial_Vehiculo" EntitySet="Historial_Vehiculo" />
           </AssociationSet>
           <AssociationSet Name="FK_HistorialVehiculos_Vehiculos" Association="Self.FK_HistorialVehiculos_Vehiculos">
-            <End Role="Vehiculo" EntitySet="Vehiculoes" />
+            <End Role="Vehiculo" EntitySet="Vehiculo" />
             <End Role="Historial_Vehiculo" EntitySet="Historial_Vehiculo" />
           </AssociationSet>
           <AssociationSet Name="FK_InventarioRepuestos_Proveedores" Association="Self.FK_InventarioRepuestos_Proveedores">
-            <End Role="Proveedor" EntitySet="Proveedors" />
+            <End Role="Proveedor" EntitySet="Proveedor" />
             <End Role="Inventario_Repuesto" EntitySet="Inventario_Repuesto" />
           </AssociationSet>
           <AssociationSet Name="FK_OrdenesServicio_Vehiculos" Association="Self.FK_OrdenesServicio_Vehiculos">
-            <End Role="Vehiculo" EntitySet="Vehiculoes" />
+            <End Role="Vehiculo" EntitySet="Vehiculo" />
             <End Role="Ordenes_de_Servicio" EntitySet="Ordenes_de_Servicio" />
           </AssociationSet>
-          <AssociationSet Name="FK_Usuario_Perfil" Association="Self.FK_Usuario_Perfil">
-            <End Role="Perfil" EntitySet="Perfils" />
-            <End Role="Usuario" EntitySet="Usuarios" />
-          </AssociationSet>
           <AssociationSet Name="FK_Usuario_Perfil_Perfil" Association="Self.FK_Usuario_Perfil_Perfil">
-            <End Role="Perfil" EntitySet="Perfils" />
+            <End Role="Perfil" EntitySet="Perfil" />
             <End Role="Usuario_Perfil" EntitySet="Usuario_Perfil" />
           </AssociationSet>
           <AssociationSet Name="FK_ServiciosTipos_Servicios" Association="Self.FK_ServiciosTipos_Servicios">
-            <End Role="Servicio" EntitySet="Servicios" />
+            <End Role="Servicio" EntitySet="Servicio" />
             <End Role="Servicios_Tipos" EntitySet="Servicios_Tipos" />
           </AssociationSet>
           <AssociationSet Name="FK_ServiciosTipos_TiposServicio" Association="Self.FK_ServiciosTipos_TiposServicio">
@@ -1458,16 +1422,16 @@
             <End Role="Vehiculo_en_Taller_Ubicacion" EntitySet="Vehiculo_en_Taller_Ubicacion" />
           </AssociationSet>
           <AssociationSet Name="FK_Usuario_Perfil_Usuario" Association="Self.FK_Usuario_Perfil_Usuario">
-            <End Role="Usuario" EntitySet="Usuarios" />
+            <End Role="Usuario" EntitySet="Usuario" />
             <End Role="Usuario_Perfil" EntitySet="Usuario_Perfil" />
           </AssociationSet>
           <AssociationSet Name="FK_VehiculosTallerUbicacion_Vehiculos" Association="Self.FK_VehiculosTallerUbicacion_Vehiculos">
-            <End Role="Vehiculo" EntitySet="Vehiculoes" />
+            <End Role="Vehiculo" EntitySet="Vehiculo" />
             <End Role="Vehiculo_en_Taller_Ubicacion" EntitySet="Vehiculo_en_Taller_Ubicacion" />
           </AssociationSet>
           <AssociationSet Name="FK_Ventas_Vehiculos" Association="Self.FK_Ventas_Vehiculos">
-            <End Role="Vehiculo" EntitySet="Vehiculoes" />
-            <End Role="Venta" EntitySet="Ventas" />
+            <End Role="Vehiculo" EntitySet="Vehiculo" />
+            <End Role="Venta" EntitySet="Venta" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -1476,7 +1440,7 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="VentaDeCarrosTallerModelStoreContainer" CdmEntityContainer="VentaDeCarrosTallerEntities">
-          <EntitySetMapping Name="Clientes">
+          <EntitySetMapping Name="Cliente">
             <EntityTypeMapping TypeName="VentaDeCarrosTallerModel.Cliente">
               <MappingFragment StoreEntitySet="Cliente">
                 <ScalarProperty Name="ID_Cliente" ColumnName="ID_Cliente" />
@@ -1529,7 +1493,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Empleadoes">
+          <EntitySetMapping Name="Empleado">
             <EntityTypeMapping TypeName="VentaDeCarrosTallerModel.Empleado">
               <MappingFragment StoreEntitySet="Empleado">
                 <ScalarProperty Name="ID_Empleado" ColumnName="ID_Empleado" />
@@ -1542,7 +1506,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Facturas">
+          <EntitySetMapping Name="Factura">
             <EntityTypeMapping TypeName="VentaDeCarrosTallerModel.Factura">
               <MappingFragment StoreEntitySet="Factura">
                 <ScalarProperty Name="ID_Factura" ColumnName="ID_Factura" />
@@ -1558,7 +1522,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Garantias">
+          <EntitySetMapping Name="Garantia">
             <EntityTypeMapping TypeName="VentaDeCarrosTallerModel.Garantia">
               <MappingFragment StoreEntitySet="Garantia">
                 <ScalarProperty Name="ID_Garantia" ColumnName="ID_Garantia" />
@@ -1614,7 +1578,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Perfils">
+          <EntitySetMapping Name="Perfil">
             <EntityTypeMapping TypeName="VentaDeCarrosTallerModel.Perfil">
               <MappingFragment StoreEntitySet="Perfil">
                 <ScalarProperty Name="id" ColumnName="id" />
@@ -1623,7 +1587,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Proveedors">
+          <EntitySetMapping Name="Proveedor">
             <EntityTypeMapping TypeName="VentaDeCarrosTallerModel.Proveedor">
               <MappingFragment StoreEntitySet="Proveedor">
                 <ScalarProperty Name="ID_Proveedor" ColumnName="ID_Proveedor" />
@@ -1646,7 +1610,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Servicios">
+          <EntitySetMapping Name="Servicio">
             <EntityTypeMapping TypeName="VentaDeCarrosTallerModel.Servicio">
               <MappingFragment StoreEntitySet="Servicio">
                 <ScalarProperty Name="ID_Servicio" ColumnName="ID_Servicio" />
@@ -1684,12 +1648,11 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Usuarios">
+          <EntitySetMapping Name="Usuario">
             <EntityTypeMapping TypeName="VentaDeCarrosTallerModel.Usuario">
               <MappingFragment StoreEntitySet="Usuario">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
-                <ScalarProperty Name="idPerfil" ColumnName="idPerfil" />
                 <ScalarProperty Name="userName" ColumnName="userName" />
                 <ScalarProperty Name="Clave" ColumnName="Clave" />
                 <ScalarProperty Name="Salt" ColumnName="Salt" />
@@ -1706,7 +1669,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Vehiculoes">
+          <EntitySetMapping Name="Vehiculo">
             <EntityTypeMapping TypeName="VentaDeCarrosTallerModel.Vehiculo">
               <MappingFragment StoreEntitySet="Vehiculo">
                 <ScalarProperty Name="ID_Vehiculo" ColumnName="ID_Vehiculo" />
@@ -1733,7 +1696,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Ventas">
+          <EntitySetMapping Name="Venta">
             <EntityTypeMapping TypeName="VentaDeCarrosTallerModel.Venta">
               <MappingFragment StoreEntitySet="Venta">
                 <ScalarProperty Name="ID_Venta" ColumnName="ID_Venta" />
@@ -1759,7 +1722,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />

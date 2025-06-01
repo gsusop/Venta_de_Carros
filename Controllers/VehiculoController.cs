@@ -8,10 +8,9 @@ using Venta_de_Carros.Models;
 
 namespace Venta_de_Carros.Controllers
 {
-    public class VehiculoController
-    {
-        [RoutePrefix("api/Vehiculos")]
-        public class VehiculosController : ApiController
+    [RoutePrefix("api/Vehiculos")]
+    [Authorize]
+    public class VehiculosController : ApiController
         {
             // GET api/<controller>
             [HttpGet]
@@ -59,6 +58,5 @@ namespace Venta_de_Carros.Controllers
                 VehiculoClase.Vehiculo = VehiculoAEliminar; // Asignar el parámetro a la propiedad Vehiculo de la clase
                 return VehiculoClase.Eliminar();
             }
-        }
     }
 }

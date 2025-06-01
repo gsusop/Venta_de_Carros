@@ -8,10 +8,9 @@ using Venta_de_Carros.Models;
 
 namespace Venta_de_Carros.Controllers
 {
-    public class ClienteController
-    {
-        [RoutePrefix("api/Clientes")]
-        public class ClientesController : ApiController
+    [RoutePrefix("api/Clientes")]
+    [Authorize]
+       public class ClientesController : ApiController
         {
             // GET api/<controller>
             [HttpGet]
@@ -60,5 +59,5 @@ namespace Venta_de_Carros.Controllers
                 return Cliente.Eliminar();
             }
         }
-    }
+    
 }

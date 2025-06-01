@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\UNIVERSIDAD\\ITM\\5 SEMESTRE\\App servicios web\\proyecto_Final\\Venta_carros\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9C2CD61F-C545-4846-AC1F-7901AB57F59F}|Venta_de_Carros.csproj|c:\\universidad\\itm\\5 semestre\\app servicios web\\proyecto_final\\venta_carros\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{9C2CD61F-C545-4846-AC1F-7901AB57F59F}|Venta_de_Carros.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\UNIVERSIDAD\\ITM\\5 SEMESTRE\\App servicios web\\proyecto_Final\\Venta_carros\\Web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9C2CD61F-C545-4846-AC1F-7901AB57F59F}|Venta_de_Carros.csproj|c:\\universidad\\itm\\5 semestre\\app servicios web\\proyecto_final\\venta_carros\\controllers\\detallefacturacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C2CD61F-C545-4846-AC1F-7901AB57F59F}|Venta_de_Carros.csproj|solutionrelative:controllers\\detallefacturacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\UNIVERSIDAD\\ITM\\5 SEMESTRE\\App servicios web\\proyecto_Final\\Venta_carros\\Clases\\clsDetalleFactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Clases\\clsDetalleFactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9C2CD61F-C545-4846-AC1F-7901AB57F59F}|Venta_de_Carros.csproj|c:\\universidad\\itm\\5 semestre\\app servicios web\\proyecto_final\\venta_carros\\controllers\\ventacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C2CD61F-C545-4846-AC1F-7901AB57F59F}|Venta_de_Carros.csproj|solutionrelative:controllers\\ventacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\UNIVERSIDAD\\ITM\\5 SEMESTRE\\App servicios web\\proyecto_Final\\Venta_carros\\Controllers\\VentaController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\VentaController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9C2CD61F-C545-4846-AC1F-7901AB57F59F}|Venta_de_Carros.csproj|c:\\universidad\\itm\\5 semestre\\app servicios web\\proyecto_final\\venta_carros\\clases\\clsdetallefactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C2CD61F-C545-4846-AC1F-7901AB57F59F}|Venta_de_Carros.csproj|solutionrelative:clases\\clsdetallefactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\UNIVERSIDAD\\ITM\\5 SEMESTRE\\App servicios web\\proyecto_Final\\Venta_carros\\Controllers\\DetalleFacturaController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\DetalleFacturaController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -80,14 +80,14 @@
               "RelativeDocumentMoniker": "Web.config",
               "ToolTip": "C:\\UNIVERSIDAD\\ITM\\5 SEMESTRE\\App servicios web\\proyecto_Final\\Venta_carros\\Web.config",
               "RelativeToolTip": "Web.config",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAFoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAFkAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
               "WhenOpened": "2025-05-31T13:01:24.099Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "clsDetalleFactura.cs",
               "DocumentMoniker": "C:\\UNIVERSIDAD\\ITM\\5 SEMESTRE\\App servicios web\\proyecto_Final\\Venta_carros\\Clases\\clsDetalleFactura.cs",
               "RelativeDocumentMoniker": "Clases\\clsDetalleFactura.cs",
@@ -113,7 +113,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "DetalleFacturaController.cs",
               "DocumentMoniker": "C:\\UNIVERSIDAD\\ITM\\5 SEMESTRE\\App servicios web\\proyecto_Final\\Venta_carros\\Controllers\\DetalleFacturaController.cs",
               "RelativeDocumentMoniker": "Controllers\\DetalleFacturaController.cs",
