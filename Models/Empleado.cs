@@ -10,10 +10,8 @@
 namespace Venta_de_Carros.Models
 {
     using Newtonsoft.Json;
-    using System;
     using System.Collections.Generic;
-    using System.Text.Json.Serialization;
-
+    
     public partial class Empleado
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -32,7 +30,7 @@ namespace Venta_de_Carros.Models
         public string Telefono { get; set; }
         public string Correo_Electronico { get; set; }
 
-        [JsonIgnore]
+        
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         [JsonIgnore]
         public virtual ICollection<Ordenes_de_Servicio> Ordenes_de_Servicio { get; set; }
