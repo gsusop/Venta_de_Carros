@@ -12,7 +12,6 @@ namespace Venta_de_Carros.Models
     using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
-    using System.Text.Json.Serialization;
 
     public partial class Ordenes_de_Servicio
     {
@@ -38,7 +37,6 @@ namespace Venta_de_Carros.Models
         public string Comentarios_Adicionales { get; set; }
 
 
-        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         [JsonIgnore]
         public virtual ICollection<Detalle_Repuestos_Orden> Detalle_Repuestos_Orden { get; set; }
@@ -51,7 +49,6 @@ namespace Venta_de_Carros.Models
         [JsonIgnore]
         public virtual Empleado Empleado { get; set; }
 
-        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         [JsonIgnore]
         public virtual ICollection<Factura> Factura { get; set; }
