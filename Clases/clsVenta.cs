@@ -14,14 +14,7 @@ namespace Venta_de_Carros.Clases
 
         public List<Venta> ConsultarTodos()
         {
-            
             return ITM_Ventas.Venta.ToList();
-        }
-
-        public Venta Consultar(string idventa)
-        {
-            Venta venta = ITM_Ventas.Venta.FirstOrDefault(e => e.ID_Venta.ToString() == idventa.ToString());
-            return venta;
         }
 
         public string Insertar()
@@ -36,11 +29,17 @@ namespace Venta_de_Carros.Clases
             Venta venta = Consultar(Venta.ID_Venta.ToString());
             if (venta == null)
             {
-                return "La venta no existe";
+                return "El detalle de la factura no existe";
             }
             ITM_Ventas.Venta.AddOrUpdate(Venta);
             ITM_Ventas.SaveChanges();
             return "Se actualizó correctamente";
+        }
+
+        public Venta Consultar(string idventa)
+        {
+            Venta venta = ITM_Ventas.Venta.FirstOrDefault(e => e.ID_Venta.ToString() == idventa.ToString());
+            return venta;
         }
 
         public string Eliminar()
@@ -66,4 +65,3 @@ namespace Venta_de_Carros.Clases
 
     }
 }
-

@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,7 +10,6 @@ using Venta_de_Carros.Models;
 
 namespace Venta_de_Carros.Controllers
 {
-
     [RoutePrefix("api/Ventas")]
     public class VentaController : ApiController
     {
@@ -17,35 +17,28 @@ namespace Venta_de_Carros.Controllers
         [Route("ConsultarTodos")]
         public List<Venta> ConsultarTodos()
         {
-            clsVenta detVenta = new clsVenta();
-            var data = detVenta.ConsultarTodos();
+            clsVenta venta = new clsVenta();
+            var data = venta.ConsultarTodos();
             return data;
         }
 
-        [HttpGet]
-        [Route("ConsultarPorId")]
-        public Venta ConsultarPorId([FromUri] string idventa)
-        {
-            clsVenta venta = new clsVenta();
-            return venta.Consultar(idventa);
-        }
-
-
         [HttpPost]
         [Route("Insertar")]
-        public string Insertar([FromBody] Venta nuevaventa) 
+        public string Insertar([FromBody] Venta nuevaventa) // Cambiar el nombre del parámetro a nuevoEmpleado
         {
             clsVenta venta = new clsVenta();
-            venta.Venta = nuevaventa; 
+            venta.Venta = nuevaventa; // Asignar el parámetro a la propiedad Empleado de la clase
             return venta.Insertar();
         }
 
+
+
         [HttpPut]
         [Route("Actualizar")]
-        public string Actualizar([FromBody] Venta ventaActualizada)
+        public string Actualizar([FromBody] Venta ventaAct)
         {
             clsVenta venta = new clsVenta();
-            venta.Venta = ventaActualizada;
+            venta.Venta = ventaAct;
             return venta.Actualizar();
         }
 
@@ -57,8 +50,6 @@ namespace Venta_de_Carros.Controllers
             venta.Venta = ventaElimi;
             return venta.Eliminar();
         }
-
-
 
 
     }
