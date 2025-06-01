@@ -18,6 +18,10 @@ namespace Venta_de_Carros.Models
         public VentaDeCarrosTallerEntities()
             : base("name=VentaDeCarrosTallerEntities")
         {
+            // Deshabilita la carga diferida para todo el contexto
+            this.Configuration.LazyLoadingEnabled = false;
+            // También se recomienda deshabilitar la creación de proxies dinámicos
+            this.Configuration.ProxyCreationEnabled = false;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -35,7 +39,7 @@ namespace Venta_de_Carros.Models
         public virtual DbSet<Historial_Vehiculo> Historial_Vehiculo { get; set; }
         public virtual DbSet<Inventario_Repuesto> Inventario_Repuesto { get; set; }
         public virtual DbSet<Ordenes_de_Servicio> Ordenes_de_Servicio { get; set; }
-        public virtual DbSet<Perfil> Perfils { get; set; }
+        public virtual DbSet<Perfil> Perfil { get; set; }
         public virtual DbSet<Proveedor> Proveedor { get; set; }
         public virtual DbSet<Revisiones_Garantia> Revisiones_Garantia { get; set; }
         public virtual DbSet<Servicio> Servicio { get; set; }

@@ -22,13 +22,11 @@ namespace Venta_de_Carros.Models
     
         public int id { get; set; }
         public int idEmpleado { get; set; }
-        public int idPerfil { get; set; }
         public string userName { get; set; }
         public string Clave { get; set; }
         public string Salt { get; set; }
     
         public virtual Empleado Empleado { get; set; }
-        public virtual Perfil Perfil { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Usuario_Perfil> Usuario_Perfil { get; set; }
     }

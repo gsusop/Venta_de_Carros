@@ -17,7 +17,6 @@ namespace Venta_de_Carros.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Perfil()
         {
-            this.Usuarios = new HashSet<Usuario>();
             this.Usuario_Perfil = new HashSet<Usuario_Perfil>();
         }
     
@@ -25,8 +24,6 @@ namespace Venta_de_Carros.Models
         public string Nombre { get; set; }
         public string PaginaNavegar { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Usuario> Usuarios { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Usuario_Perfil> Usuario_Perfil { get; set; }
     }

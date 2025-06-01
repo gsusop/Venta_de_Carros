@@ -10,6 +10,7 @@ using Venta_de_Carros.Models;
 namespace Venta_de_Carros.Controllers
 {
     [RoutePrefix("api/Servicios")]
+    [Authorize]
     public class ServicioController : ApiController
     {
  

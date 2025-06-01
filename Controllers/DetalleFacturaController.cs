@@ -10,6 +10,7 @@ using Venta_de_Carros.Models;
 namespace Venta_de_Carros.Controllers
 {
     [RoutePrefix("api/DetalleFacturas")]
+    [Authorize]
     public class DetalleFacturaController : ApiController
     {
         [HttpGet]
