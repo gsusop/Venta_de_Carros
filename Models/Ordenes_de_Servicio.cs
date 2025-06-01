@@ -19,7 +19,7 @@ namespace Venta_de_Carros.Models
         {
             this.Detalle_Repuestos_Orden = new HashSet<Detalle_Repuestos_Orden>();
             this.Detalle_Servicio = new HashSet<Detalle_Servicio>();
-            this.Facturas = new HashSet<Factura>();
+            this.Factura = new HashSet<Factura>();
             this.Historial_Vehiculo = new HashSet<Historial_Vehiculo>();
         }
     
@@ -41,7 +41,7 @@ namespace Venta_de_Carros.Models
         public virtual ICollection<Detalle_Servicio> Detalle_Servicio { get; set; }
         public virtual Empleado Empleado { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Factura> Facturas { get; set; }
+        public virtual ICollection<Factura> Factura { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Historial_Vehiculo> Historial_Vehiculo { get; set; }
         public virtual Vehiculo Vehiculo { get; set; }

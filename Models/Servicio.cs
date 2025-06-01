@@ -9,7 +9,6 @@
 
 namespace Venta_de_Carros.Models
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -26,13 +25,10 @@ namespace Venta_de_Carros.Models
         public string Nombre_Servicio { get; set; }
         public string Descripcion { get; set; }
         public Nullable<decimal> Precio_Base { get; set; }
-
-        [JsonIgnore]
+    
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Detalle_Servicio> Detalle_Servicio { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        
-        [JsonIgnore] 
         public virtual ICollection<Servicios_Tipos> Servicios_Tipos { get; set; }
     }
 }
