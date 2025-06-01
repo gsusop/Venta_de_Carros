@@ -11,7 +11,8 @@ namespace Venta_de_Carros.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Text.Json.Serialization;
+
     public partial class Ordenes_de_Servicio
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -36,14 +37,20 @@ namespace Venta_de_Carros.Models
         public string Comentarios_Adicionales { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [JsonIgnore]
         public virtual ICollection<Detalle_Repuestos_Orden> Detalle_Repuestos_Orden { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [JsonIgnore]
         public virtual ICollection<Detalle_Servicio> Detalle_Servicio { get; set; }
+        [JsonIgnore]
         public virtual Empleado Empleado { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [JsonIgnore]
         public virtual ICollection<Factura> Factura { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [JsonIgnore]
         public virtual ICollection<Historial_Vehiculo> Historial_Vehiculo { get; set; }
+        [JsonIgnore]
         public virtual Vehiculo Vehiculo { get; set; }
     }
 }

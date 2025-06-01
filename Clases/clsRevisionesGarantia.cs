@@ -4,6 +4,8 @@ using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Web;
 using Venta_de_Carros.Models;
+using System.Data.Entity;
+
 
 namespace Venta_de_Carros.Clases
 {
@@ -66,7 +68,16 @@ namespace Venta_de_Carros.Clases
 
         public List<Revisiones_Garantia> ConsultarTodos()
         {
-            return ITM_Ventas.Revisiones_Garantia.ToList();
+            // 1. Usa .Include() para cargar las entidades relacionadas que necesitas.
+            // 2. Usa .Select() para proyectar los resultados a tu DTO.
+            var resut = ITM_Ventas
+                .Revisiones_Garantia
+                //.Include(rg => rg.Garantia) // Incluye la entidad Garantia
+                //.Include(rg => rg.Empleado) // Incluye la entidad Empleado
+                .ToList();
+
+            return resut; // Ahora retorna la lista de DTOs
+
         }
     }
 }

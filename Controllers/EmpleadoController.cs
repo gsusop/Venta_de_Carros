@@ -9,6 +9,7 @@ using Venta_de_Carros.Models;
 namespace Venta_de_Carros.Controllers
 {
     [RoutePrefix("api/Empleados")]
+    [Authorize]
     public class EmpleadosController : ApiController
     {
         // GET api/<controller>

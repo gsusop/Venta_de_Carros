@@ -10,6 +10,7 @@ using Venta_de_Carros.Models;
 namespace Venta_de_Carros.Controllers
 {
     [RoutePrefix("api/Facturas")]
+    [Authorize]
     public class FacturaController : ApiController
     {
         // GET api/<controller>

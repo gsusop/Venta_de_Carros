@@ -10,12 +10,11 @@ using Venta_de_Carros.Models;
 namespace Venta_de_Carros.Controllers
 {
     [RoutePrefix("api/Usuarios")]
+    [Authorize]
     public class UsuariosController : ApiController
     {
         [HttpPost]
         [Route("CrearUsuario")]
-
-
 
         public string CrearUsuario([FromBody] Usuario usuario, int idPerfil)
         {

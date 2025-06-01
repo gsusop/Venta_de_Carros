@@ -18,6 +18,10 @@ namespace Venta_de_Carros.Models
         public VentaDeCarrosTallerEntities()
             : base("name=VentaDeCarrosTallerEntities")
         {
+            // Deshabilita la carga diferida para todo el contexto
+            this.Configuration.LazyLoadingEnabled = false;
+            // También se recomienda deshabilitar la creación de proxies dinámicos
+            this.Configuration.ProxyCreationEnabled = false;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
