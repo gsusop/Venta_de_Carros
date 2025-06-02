@@ -37,7 +37,7 @@ namespace Plantilla.Clases
                 {
                     return "el vehiculo en taller no existe";
                 }
-                ITM_Ventas.Vehiculo_en_Taller_Ubicacion.Remove(vehiculoEnTallerUbicacion);
+                ITM_Ventas.Vehiculo_en_Taller_Ubicacion.Remove(vehiTaller);
                 ITM_Ventas.SaveChanges();
                 return "Se eliminó el vehiculo en taller exitosamente";
             }

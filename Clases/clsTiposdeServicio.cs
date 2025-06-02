@@ -37,7 +37,7 @@ namespace Plantilla.Clases
                 {
                     return "el tipo de servicio no existe";
                 }
-                ITM_Ventas.Tipos_de_Servicio.Remove(tps);
+                ITM_Ventas.Tipos_de_Servicio.Remove(usu);
                 ITM_Ventas.SaveChanges();
                 return "Se eliminó el tipo de servicio exitosamente";
             }

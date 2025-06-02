@@ -36,7 +36,7 @@ namespace Plantilla.Clases
                 {
                     return "el Perfil no existe";
                 }
-                ITM_Ventas.Perfil.Remove(perfil);
+                ITM_Ventas.Perfil.Remove(usu);
                 ITM_Ventas.SaveChanges();
                 return "Se eliminó el Perfil exitosamente";
             }
