@@ -4,11 +4,14 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using Venta_de_Carros.Clases;
 using Venta_de_Carros.Models;
 
 namespace Venta_de_Carros.Controllers
 {
+
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     [RoutePrefix("api/Servicios")]
     [Authorize]
     public class ServicioController : ApiController
