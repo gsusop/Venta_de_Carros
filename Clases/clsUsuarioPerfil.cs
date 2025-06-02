@@ -1,9 +1,9 @@
-﻿using Plantilla.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Web;
+using Venta_de_Carros.Models;
 
 namespace Plantilla.Clases
 {
