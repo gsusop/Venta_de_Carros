@@ -10,6 +10,7 @@ using Venta_de_Carros.Models;
 namespace Venta_de_Carros.Controllers
 {
     [RoutePrefix("api/DetalleRepuestoOrden")]
+    [Authorize]
     public class DetalleRepuestoOrdenController : ApiController
     {
         [HttpGet]
@@ -38,7 +39,7 @@ namespace Venta_de_Carros.Controllers
         {
             clsDetalleRepuestoOrden detRepuOrd = new clsDetalleRepuestoOrden();
             detRepuOrd.Detalle_Repuestos_Orden = detalleRepuestoActualizado; 
-            return detRepuOrd.Insertar();
+            return detRepuOrd.Actualizar();
         }
 
 

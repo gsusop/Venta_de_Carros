@@ -11,6 +11,7 @@ using Venta_de_Carros.Models;
 namespace Venta_de_Carros.Controllers
 {
     [RoutePrefix("api/Ventas")]
+    [Authorize]
     public class VentaController : ApiController
     {
         [HttpGet]

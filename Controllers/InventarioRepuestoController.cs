@@ -11,6 +11,7 @@ namespace Venta_de_Carros.Controllers
 {
 
     [RoutePrefix("api/InventarioRepuesto")]
+    [Authorize]
     public class InventarioRepuestoController : ApiController
     {
         [HttpGet]
