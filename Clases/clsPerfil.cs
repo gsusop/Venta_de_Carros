@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using Venta_de_Carros.Models;
 
-namespace Plantilla.Clases
+namespace Venta_de_Carros.Clases
 {
     public class clsPerfil
     {
