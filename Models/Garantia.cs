@@ -11,8 +11,7 @@ namespace Venta_de_Carros.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.Text.Json.Serialization;
-
+    
     public partial class Garantia
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -29,12 +28,8 @@ namespace Venta_de_Carros.Models
         public Nullable<int> Kilometraje_Inicio { get; set; }
         public Nullable<int> Kilometraje_Fin { get; set; }
         public string Estado_Garantia { get; set; }
-
-
-        [JsonIgnore]    
+    
         public virtual Venta Venta { get; set; }
-
-        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Revisiones_Garantia> Revisiones_Garantia { get; set; }
     }

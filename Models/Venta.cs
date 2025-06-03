@@ -9,7 +9,6 @@
 
 namespace Venta_de_Carros.Models
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -18,7 +17,7 @@ namespace Venta_de_Carros.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Venta()
         {
-            this.Garantia = new HashSet<Garantia>();
+            this.Garantias = new HashSet<Garantia>();
         }
     
         public int ID_Venta { get; set; }
@@ -27,16 +26,10 @@ namespace Venta_de_Carros.Models
         public System.DateTime Fecha_Venta { get; set; }
         public Nullable<decimal> Precio_Venta { get; set; }
         public string Numero_Factura_Venta { get; set; }
-
-
-        [JsonIgnore]
+    
         public virtual Cliente Cliente { get; set; }
-
-        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Garantia> Garantia { get; set; }
-
-        [JsonIgnore]
+        public virtual ICollection<Garantia> Garantias { get; set; }
         public virtual Vehiculo Vehiculo { get; set; }
     }
 }

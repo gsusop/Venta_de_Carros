@@ -9,11 +9,11 @@ namespace Venta_de_Carros.Clases
 {
     public class clsDetalleServicio
     {
-        private VentaDeCarrosTallerEntities ITM_Ventas = new VentaDeCarrosTallerEntities();
+        private VentaDeCarrosTallerEntities2 ITM_Ventas = new VentaDeCarrosTallerEntities2();
         public Detalle_Servicio Detalle_Servicio { get; set; }
         public string Insertar()
         {
-            ITM_Ventas.Detalle_Servicio.Add(Detalle_Servicio);
+            ITM_Ventas.Detalles_Servicios.Add(Detalle_Servicio);
             ITM_Ventas.SaveChanges();
             return "Servicio Insertado exitosamente";
         }
@@ -25,14 +25,14 @@ namespace Venta_de_Carros.Clases
             {
                 return "El detalle del servicio no existe";
             }
-            ITM_Ventas.Detalle_Servicio.AddOrUpdate(Detalle_Servicio);
+            ITM_Ventas.Detalles_Servicios.AddOrUpdate(Detalle_Servicio);
             ITM_Ventas.SaveChanges();
             return "Se actualizó correctamente";
         }
 
         public Detalle_Servicio Consultar(string IdDetalle_Servicio)
         {
-            Detalle_Servicio dellateServ = ITM_Ventas.Detalle_Servicio.FirstOrDefault(e => e.ID_Detalle_Servicio.ToString() == IdDetalle_Servicio.ToString());
+            Detalle_Servicio dellateServ = ITM_Ventas.Detalles_Servicios.FirstOrDefault(e => e.ID_Detalle_Servicio.ToString() == IdDetalle_Servicio.ToString());
             return dellateServ;
         }
 
@@ -45,7 +45,7 @@ namespace Venta_de_Carros.Clases
                 {
                     return "El servicio no existe";
                 }
-                ITM_Ventas.Detalle_Servicio.Remove(dellateServ);
+                ITM_Ventas.Detalles_Servicios.Remove(dellateServ);
                 ITM_Ventas.SaveChanges();
                 return "Se eliminó el servicio exitosamente";
             }
@@ -57,7 +57,7 @@ namespace Venta_de_Carros.Clases
 
         public List<Detalle_Servicio> ConsultarTodos()
         {
-            return ITM_Ventas.Detalle_Servicio.ToList();
+            return ITM_Ventas.Detalles_Servicios.ToList();
         }
     }
 }

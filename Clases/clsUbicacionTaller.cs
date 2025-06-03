@@ -9,11 +9,11 @@ namespace Venta_de_Carros.Clases
 {
     public class clsUbicaciones_Taller
     {
-        private VentaDeCarrosTallerEntities ITM_Ventas = new VentaDeCarrosTallerEntities(); // Objeto de la base de datos permite manipular el CRUD de los objetos generados
+        private VentaDeCarrosTallerEntities2 ITM_Ventas = new VentaDeCarrosTallerEntities2(); // Objeto de la base de datos permite manipular el CRUD de los objetos generados
         public Ubicaciones_Taller Ubicaciones_Taller { get; set; }// permite manipular o acceder a los atributos de la tabla Ubicaciones_Taller
         public string Insertar()
         {
-            ITM_Ventas.Ubicaciones_Taller.Add(Ubicaciones_Taller);// agrega un nuevo Taller a la tabla Ubicaciones_Taller (INsert Into)
+            ITM_Ventas.Ubicaciones_Talleres.Add(Ubicaciones_Taller);// agrega un nuevo Taller a la tabla Ubicaciones_Taller (INsert Into)
             ITM_Ventas.SaveChanges();//Guarda los cambios en la BD
             return "Taller Insertado exitosamente";//Mensaje de confirmaion
         }
@@ -25,13 +25,13 @@ namespace Venta_de_Carros.Clases
             {
                 return "EL Taller no existe";
             }
-            ITM_Ventas.Ubicaciones_Taller.AddOrUpdate(Ubicaciones_Taller);//Actualiza un Ubicaciones_Taller en la tabla Ubicaciones_Taller
+            ITM_Ventas.Ubicaciones_Talleres.AddOrUpdate(Ubicaciones_Taller);//Actualiza un Ubicaciones_Taller en la tabla Ubicaciones_Taller
             ITM_Ventas.SaveChanges();
             return "Se actualizó el Taller correctamente";
         }
         public Ubicaciones_Taller Consultar(string Nombre)
         {
-            Ubicaciones_Taller ubt = ITM_Ventas.Ubicaciones_Taller.FirstOrDefault(ut => ut.Nombre_Ubicacion == Nombre);//consulta un Ubicaciones_Taller por su documento
+            Ubicaciones_Taller ubt = ITM_Ventas.Ubicaciones_Talleres.FirstOrDefault(ut => ut.Nombre_Ubicacion == Nombre);//consulta un Ubicaciones_Taller por su documento
             return ubt;
         }
 
@@ -44,7 +44,7 @@ namespace Venta_de_Carros.Clases
                 {
                     return "EL Ubicaciones_Taller no existe";
                 }
-                ITM_Ventas.Ubicaciones_Taller.Remove(ubt);//Elimina un Taller de la tabla Ubicaciones_Taller
+                ITM_Ventas.Ubicaciones_Talleres.Remove(ubt);//Elimina un Taller de la tabla Ubicaciones_Taller
                 ITM_Ventas.SaveChanges();//GUarda los cambios
                 return "Se eliminó el Taller exitosamente";// Mensaje de confirmacion
             }
@@ -56,7 +56,7 @@ namespace Venta_de_Carros.Clases
 
         public List<Ubicaciones_Taller> ConsultarTodos()
         {
-            return ITM_Ventas.Ubicaciones_Taller.ToList();
+            return ITM_Ventas.Ubicaciones_Talleres.ToList();
         }
 
     }

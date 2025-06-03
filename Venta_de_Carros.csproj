@@ -258,86 +258,89 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Cliente.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Venta_de_Carros.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Detalle_Factura.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Venta_de_Carros.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Detalle_Repuestos_Orden.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Venta_de_Carros.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Detalle_Servicio.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Venta_de_Carros.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Empleado.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Venta_de_Carros.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Factura.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Venta_de_Carros.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Garantia.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Venta_de_Carros.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Historial_Vehiculo.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Venta_de_Carros.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Inventario_Repuesto.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Venta_de_Carros.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\libLogincs.cs" />
-    <Compile Include="Models\Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Model1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Model1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Models\Ordenes_de_Servicio.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Venta_de_Carros.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Perfil.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Venta_de_Carros.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Proveedor.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Venta_de_Carros.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Revisiones_Garantia.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Venta_de_Carros.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Servicio.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Venta_de_Carros.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Servicios_Tipos.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Venta_de_Carros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>Venta_de_Carros.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Tipos_de_Servicio.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Venta_de_Carros.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Ubicaciones_Taller.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Venta_de_Carros.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Usuario.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Venta_de_Carros.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Usuario_Perfil.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Venta_de_Carros.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Vehiculo.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Venta_de_Carros.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Vehiculo_en_Taller_Ubicacion.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Venta_de_Carros.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Venta.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Venta_de_Carros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Venta_de_Carros.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Venta_de_Carros.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Venta_de_Carros.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Venta_de_Carros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Venta_de_Carros.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Venta_de_Carros.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -361,16 +364,6 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Models\Model1.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\Model1.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
-    </Content>
     <Content Include="Areas\HelpPage\Views\Web.config" />
     <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\ResourceModel.cshtml" />
@@ -390,13 +383,6 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
-    <EntityDeploy Include="Models\Model1.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </Content>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
     <Content Include="Content\bootstrap.rtl.css.map" />
     <Content Include="Content\bootstrap.min.css.map" />
@@ -413,7 +399,24 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <EntityDeploy Include="Models\Venta_de_Carros.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Venta_de_Carros.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Venta_de_Carros.edmx.diagram">
+      <DependentUpon>Venta_de_Carros.edmx</DependentUpon>
+    </Content>
     <None Include="Properties\PublishProfiles\site27035-WebDeploy.pubxml" />
+    <Content Include="Models\Venta_de_Carros.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Venta_de_Carros.edmx</DependentUpon>
+      <LastGenOutput>Venta_de_Carros.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Venta_de_Carros.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Venta_de_Carros.edmx</DependentUpon>
+      <LastGenOutput>Venta_de_Carros.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />

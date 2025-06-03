@@ -9,19 +9,19 @@ namespace Venta_de_Carros.Clases
 {
     public class clsHistorialVehiculo
     {
-        private VentaDeCarrosTallerEntities ITM_Ventas = new VentaDeCarrosTallerEntities();
+        private VentaDeCarrosTallerEntities2 ITM_Ventas = new VentaDeCarrosTallerEntities2();
         public Historial_Vehiculo Historial_Vehiculo { get; set; }
 
 
         public List<Historial_Vehiculo> ConsultarTodos()
         {
-            return ITM_Ventas.Historial_Vehiculo.ToList();
+            return ITM_Ventas.Historial_Vehiculos.ToList();
         }
 
 
         public string Insertar()
         {
-            ITM_Ventas.Historial_Vehiculo.Add(Historial_Vehiculo);
+            ITM_Ventas.Historial_Vehiculos.Add(Historial_Vehiculo);
             ITM_Ventas.SaveChanges();
             return "Historial Insertado exitosamente";
         }
@@ -33,14 +33,14 @@ namespace Venta_de_Carros.Clases
             {
                 return "El historial no existe";
             }
-            ITM_Ventas.Historial_Vehiculo.AddOrUpdate(Historial_Vehiculo);
+            ITM_Ventas.Historial_Vehiculos.AddOrUpdate(Historial_Vehiculo);
             ITM_Ventas.SaveChanges();
             return "Se actualizó correctamente";
         }
 
         public Historial_Vehiculo Consultar(string idHistorial)
         {
-            Historial_Vehiculo histVeh = ITM_Ventas.Historial_Vehiculo.FirstOrDefault(e => e.ID_Historial.ToString() == idHistorial.ToString());
+            Historial_Vehiculo histVeh = ITM_Ventas.Historial_Vehiculos.FirstOrDefault(e => e.ID_Historial.ToString() == idHistorial.ToString());
             return histVeh;
         }
 
@@ -53,7 +53,7 @@ namespace Venta_de_Carros.Clases
                 {
                     return "El historial no existe";
                 }
-                ITM_Ventas.Historial_Vehiculo.Remove(detaVehi);
+                ITM_Ventas.Historial_Vehiculos.Remove(detaVehi);
                 ITM_Ventas.SaveChanges();
                 return "Se eliminó el historial exitosamente";
             }

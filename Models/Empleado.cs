@@ -9,9 +9,10 @@
 
 namespace Venta_de_Carros.Models
 {
-    using Newtonsoft.Json;
+    using System;
     using System.Collections.Generic;
-    
+    using System.Text.Json.Serialization;
+
     public partial class Empleado
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,7 +20,7 @@ namespace Venta_de_Carros.Models
         {
             this.Ordenes_de_Servicio = new HashSet<Ordenes_de_Servicio>();
             this.Revisiones_Garantia = new HashSet<Revisiones_Garantia>();
-            this.Usuario = new HashSet<Usuario>();
+            this.Usuarios = new HashSet<Usuario>();
         }
     
         public int ID_Empleado { get; set; }
@@ -30,19 +31,16 @@ namespace Venta_de_Carros.Models
         public string Telefono { get; set; }
         public string Correo_Electronico { get; set; }
 
-        
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         [JsonIgnore]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Ordenes_de_Servicio> Ordenes_de_Servicio { get; set; }
-
+        [JsonIgnore]
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        [JsonIgnore]
         public virtual ICollection<Revisiones_Garantia> Revisiones_Garantia { get; set; }
-
+        [JsonIgnore]
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        [JsonIgnore]
-        public virtual ICollection<Usuario> Usuario { get; set; }
+        public virtual ICollection<Usuario> Usuarios { get; set; }
     }
 }

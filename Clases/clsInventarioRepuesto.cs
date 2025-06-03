@@ -9,14 +9,14 @@ namespace Venta_de_Carros.Clases
 {
 	public class clsInventarioRepuesto
 	{
-        private VentaDeCarrosTallerEntities ITM_Ventas = new VentaDeCarrosTallerEntities(); 
+        private VentaDeCarrosTallerEntities2 ITM_Ventas = new VentaDeCarrosTallerEntities2(); 
         public Inventario_Repuesto Inventario_Repuesto { get; set; }
 
         public List<Inventario_Repuesto> ConsultarTodos()
         {
             try
             {
-                return ITM_Ventas.Inventario_Repuesto.ToList(); ;
+                return ITM_Ventas.Inventario_Repuestos.ToList(); ;
             }
             catch (Exception ex)
             {
@@ -27,13 +27,13 @@ namespace Venta_de_Carros.Clases
 
         public Inventario_Repuesto Consultar(string IdRepuesto)
         {
-            Inventario_Repuesto invRep = ITM_Ventas.Inventario_Repuesto.FirstOrDefault(e => e.ID_Repuesto.ToString() == IdRepuesto.ToString());
+            Inventario_Repuesto invRep = ITM_Ventas.Inventario_Repuestos.FirstOrDefault(e => e.ID_Repuesto.ToString() == IdRepuesto.ToString());
             return invRep;
         }
 
         public string Insertar()
         {
-            ITM_Ventas.Inventario_Repuesto.Add(Inventario_Repuesto);
+            ITM_Ventas.Inventario_Repuestos.Add(Inventario_Repuesto);
             ITM_Ventas.SaveChanges();
             return "Inventario Insertada exitosamente";
         }
@@ -45,7 +45,7 @@ namespace Venta_de_Carros.Clases
             {
                 return "El inventario no existe";
             }
-            ITM_Ventas.Inventario_Repuesto.AddOrUpdate(Inventario_Repuesto);
+            ITM_Ventas.Inventario_Repuestos.AddOrUpdate(Inventario_Repuesto);
             ITM_Ventas.SaveChanges();
             return "Se actualizó correctamente";
         }
@@ -59,7 +59,7 @@ namespace Venta_de_Carros.Clases
                 {
                     return "el inventario no existe";
                 }
-                ITM_Ventas.Inventario_Repuesto.Remove(invRep);
+                ITM_Ventas.Inventario_Repuestos.Remove(invRep);
                 ITM_Ventas.SaveChanges();
                 return "Se eliminó el inventario exitosamente";
             }

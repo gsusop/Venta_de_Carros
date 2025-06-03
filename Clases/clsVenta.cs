@@ -9,17 +9,17 @@ namespace Venta_de_Carros.Clases
 {
 	public class clsVenta
 	{
-        private VentaDeCarrosTallerEntities ITM_Ventas = new VentaDeCarrosTallerEntities();
+        private VentaDeCarrosTallerEntities2 ITM_Ventas = new VentaDeCarrosTallerEntities2();
         public Venta Venta { get; set; }
 
         public List<Venta> ConsultarTodos()
         {
-            return ITM_Ventas.Venta.ToList();
+            return ITM_Ventas.Ventas.ToList();
         }
 
         public string Insertar()
         {
-            ITM_Ventas.Venta.Add(Venta);
+            ITM_Ventas.Ventas.Add(Venta);
             ITM_Ventas.SaveChanges();
             return "Venta Insertada exitosamente";
         }
@@ -31,14 +31,14 @@ namespace Venta_de_Carros.Clases
             {
                 return "El detalle de la factura no existe";
             }
-            ITM_Ventas.Venta.AddOrUpdate(Venta);
+            ITM_Ventas.Ventas.AddOrUpdate(Venta);
             ITM_Ventas.SaveChanges();
             return "Se actualizó correctamente";
         }
 
         public Venta Consultar(string idventa)
         {
-            Venta venta = ITM_Ventas.Venta.FirstOrDefault(e => e.ID_Venta.ToString() == idventa.ToString());
+            Venta venta = ITM_Ventas.Ventas.FirstOrDefault(e => e.ID_Venta.ToString() == idventa.ToString());
             return venta;
         }
 
@@ -51,7 +51,7 @@ namespace Venta_de_Carros.Clases
                 {
                     return "La venta no existe";
                 }
-                ITM_Ventas.Venta.Remove(venta);
+                ITM_Ventas.Ventas.Remove(venta);
                 ITM_Ventas.SaveChanges();
                 return "Se eliminó la venta exitosamente";
             }

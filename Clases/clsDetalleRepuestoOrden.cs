@@ -9,13 +9,13 @@ namespace Venta_de_Carros.Clases
 {
 	public class clsDetalleRepuestoOrden
 	{
-        private VentaDeCarrosTallerEntities ITM_Ventas = new VentaDeCarrosTallerEntities();
+        private VentaDeCarrosTallerEntities2 ITM_Ventas = new VentaDeCarrosTallerEntities2();
 
         public Detalle_Repuestos_Orden Detalle_Repuestos_Orden { get; set; }
 
         public string Insertar()
         {
-            ITM_Ventas.Detalle_Repuestos_Orden.Add(Detalle_Repuestos_Orden);
+            ITM_Ventas.Detalles_Repuestos_Ordenes.Add(Detalle_Repuestos_Orden);
             ITM_Ventas.SaveChanges();
             return "Detalle de repuesto insertado exitosamente";
         }
@@ -27,14 +27,14 @@ namespace Venta_de_Carros.Clases
             {
                 return "El detalle del repuesto no existe";
             }
-            ITM_Ventas.Detalle_Repuestos_Orden.AddOrUpdate(Detalle_Repuestos_Orden);
+            ITM_Ventas.Detalles_Repuestos_Ordenes.AddOrUpdate(Detalle_Repuestos_Orden);
             ITM_Ventas.SaveChanges();
             return "Se actualizó correctamente";
         }
 
         public List<Detalle_Repuestos_Orden> ConsultarTodos()
         {
-            return ITM_Ventas.Detalle_Repuestos_Orden.ToList();
+            return ITM_Ventas.Detalles_Repuestos_Ordenes.ToList();
         }
 
 
@@ -47,7 +47,7 @@ namespace Venta_de_Carros.Clases
                 {
                     return "El detalle de repuesto orden no existe";
                 }
-                ITM_Ventas.Detalle_Repuestos_Orden.Remove(detRepuOrd);
+                ITM_Ventas.Detalles_Repuestos_Ordenes.Remove(detRepuOrd);
                 ITM_Ventas.SaveChanges();
                 return "Se eliminó El detalle de repuesto orden exitosamente";
             }
@@ -60,7 +60,7 @@ namespace Venta_de_Carros.Clases
         //para actualizar   y eliminar
         public Detalle_Repuestos_Orden Consultar(string IDDetalle_Repuesto)
         {
-            Detalle_Repuestos_Orden detRepuOrd = ITM_Ventas.Detalle_Repuestos_Orden.FirstOrDefault(e => e.ID_Detalle_Repuesto.ToString() == IDDetalle_Repuesto.ToString());
+            Detalle_Repuestos_Orden detRepuOrd = ITM_Ventas.Detalles_Repuestos_Ordenes.FirstOrDefault(e => e.ID_Detalle_Repuesto.ToString() == IDDetalle_Repuesto.ToString());
             return detRepuOrd;
         }
 

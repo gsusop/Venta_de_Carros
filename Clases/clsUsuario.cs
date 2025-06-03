@@ -8,7 +8,7 @@ namespace Venta_de_Carros.Clases
 {
     public class clsUsuario
     {
-        private VentaDeCarrosTallerEntities ITM_Ventas = new VentaDeCarrosTallerEntities();
+        private VentaDeCarrosTallerEntities2 ITM_Ventas = new VentaDeCarrosTallerEntities2();
 
         public Usuario usuario { get; set; }
 
@@ -31,7 +31,7 @@ namespace Venta_de_Carros.Clases
 
             //Graba el usuario
             usuario.Salt = cypher.Salt;
-            ITM_Ventas.Usuario.Add(usuario);
+            ITM_Ventas.Usuarios.Add(usuario);
             ITM_Ventas.SaveChanges();
 
             //Graba el usuario Perfil
@@ -39,7 +39,7 @@ namespace Venta_de_Carros.Clases
             usuarioPerfil.idUsuario = usuario.id;
             usuarioPerfil.idPerfil = idPerfil;
             usuarioPerfil.Activo = true; //Cuando se crea normalmente, debe ser activo
-            ITM_Ventas.Usuario_Perfil.Add(usuarioPerfil);
+            ITM_Ventas.Usuarios_Perfiles.Add(usuarioPerfil);
             ITM_Ventas.SaveChanges();
 
             return "Se creo el usuario exitosamente";

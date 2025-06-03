@@ -11,20 +11,16 @@ namespace Venta_de_Carros.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.Text.Json.Serialization;
-
+    
     public partial class Revisiones_Garantia
     {
         public int ID_Revision { get; set; }
         public int ID_Garantia { get; set; }
-        public DateTime Fecha_Revision { get; set; }
+        public System.DateTime Fecha_Revision { get; set; }
         public string Descripcion_Revision { get; set; }
-
-        [JsonIgnore]
         public Nullable<int> ID_Empleado_Responsable { get; set; }
-        [JsonIgnore]
+    
         public virtual Empleado Empleado { get; set; }
-        [JsonIgnore]
         public virtual Garantia Garantia { get; set; }
     }
 }

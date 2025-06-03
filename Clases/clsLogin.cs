@@ -12,7 +12,7 @@ namespace Venta_de_Carros.Clases
         {
             loginRespuesta = new LoginRespuesta();
         }
-        private VentaDeCarrosTallerEntities ITM_Ventas = new VentaDeCarrosTallerEntities();
+        private VentaDeCarrosTallerEntities2 ITM_Ventas = new VentaDeCarrosTallerEntities2();
         public Login login { get; set; }
         public LoginRespuesta loginRespuesta { get; set; }
         private bool ValidarUsuario()
@@ -22,7 +22,7 @@ namespace Venta_de_Carros.Clases
                 //Se instancia un objeto de la clase Cypher
                 clsCypher cifrar = new clsCypher();
                 //Se consulta el usuario, sólo con el nombre, para obtener la información básica del usuario: Salt y clave encriptada
-                Usuario usuario = ITM_Ventas.Usuario.FirstOrDefault(u => u.userName == login.Usuario);
+                Usuario usuario = ITM_Ventas.Usuarios.FirstOrDefault(u => u.userName == login.Usuario);
                 if (usuario == null)
                 {
                     //El usuario no existe, se retorna un error
@@ -51,7 +51,7 @@ namespace Venta_de_Carros.Clases
             try
             {
                 //Se consulta el usuario con la clave encriptada y el usuario para validar si existe
-                Usuario usuario = ITM_Ventas.Usuario.FirstOrDefault(u => u.userName == login.Usuario && u.Clave == login.Clave);
+                Usuario usuario = ITM_Ventas.Usuarios.FirstOrDefault(u => u.userName == login.Usuario && u.Clave == login.Clave);
                 if (usuario == null)
                 {
                     //Si no existe la clave es incorrecta

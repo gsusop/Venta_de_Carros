@@ -12,11 +12,11 @@ namespace Venta_de_Carros.Clases
     public class clsRevisionesGarantia
     {
 
-        private VentaDeCarrosTallerEntities ITM_Ventas = new VentaDeCarrosTallerEntities();
+        private VentaDeCarrosTallerEntities2 ITM_Ventas = new VentaDeCarrosTallerEntities2();
         public Revisiones_Garantia Revisiones_Garantia { get; set; }
         public string Insertar()
         {
-            ITM_Ventas.Revisiones_Garantia.Add(Revisiones_Garantia);
+            ITM_Ventas.Revisiones_Garantias.Add(Revisiones_Garantia);
             ITM_Ventas.SaveChanges();
             return "Revisión de garantia insertada exitosamente";
         }
@@ -31,7 +31,7 @@ namespace Venta_de_Carros.Clases
                     return "La revisión de garantia no existe";
                 }
 
-                ITM_Ventas.Revisiones_Garantia.AddOrUpdate(Revisiones_Garantia);
+                ITM_Ventas.Revisiones_Garantias.AddOrUpdate(Revisiones_Garantia);
                 ITM_Ventas.SaveChanges();
                 return "Se actualizó correctamente";
             }
@@ -43,7 +43,7 @@ namespace Venta_de_Carros.Clases
 
         public Revisiones_Garantia Consultar(string IdRevision)
         {
-            Revisiones_Garantia RevisionGarantia = ITM_Ventas.Revisiones_Garantia.FirstOrDefault(e => e.ID_Revision.ToString() == IdRevision.ToString());
+            Revisiones_Garantia RevisionGarantia = ITM_Ventas.Revisiones_Garantias.FirstOrDefault(e => e.ID_Revision.ToString() == IdRevision.ToString());
             return RevisionGarantia;
         }
 
@@ -56,7 +56,7 @@ namespace Venta_de_Carros.Clases
                 {
                     return "La revisión de garantia no existe";
                 }
-                ITM_Ventas.Revisiones_Garantia.Remove(RevisionGarantia);
+                ITM_Ventas.Revisiones_Garantias.Remove(RevisionGarantia);
                 ITM_Ventas.SaveChanges();
                 return "Se eliminó la revision de factura exitosamente";
             }
@@ -71,7 +71,7 @@ namespace Venta_de_Carros.Clases
             // 1. Usa .Include() para cargar las entidades relacionadas que necesitas.
             // 2. Usa .Select() para proyectar los resultados a tu DTO.
             var resut = ITM_Ventas
-                .Revisiones_Garantia
+                .Revisiones_Garantias
                 //.Include(rg => rg.Garantia) // Incluye la entidad Garantia
                 //.Include(rg => rg.Empleado) // Incluye la entidad Empleado
                 .ToList();

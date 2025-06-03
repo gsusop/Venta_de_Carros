@@ -9,12 +9,12 @@ namespace Venta_de_Carros.Clases
 {
 	public class clsOrdenServicio
 	{
-        private VentaDeCarrosTallerEntities ITM_Ventas = new VentaDeCarrosTallerEntities(); 
+        private VentaDeCarrosTallerEntities2 ITM_Ventas = new VentaDeCarrosTallerEntities2(); 
         public Ordenes_de_Servicio Ordenes_de_Servicio { get; set; }
 
         public Ordenes_de_Servicio Consultar(string idOrdenServ)
         {
-            Ordenes_de_Servicio ordenServ = ITM_Ventas.Ordenes_de_Servicio.FirstOrDefault(e => e.ID_Orden.ToString() == idOrdenServ.ToString());
+            Ordenes_de_Servicio ordenServ = ITM_Ventas.Ordenes_de_Servicios.FirstOrDefault(e => e.ID_Orden.ToString() == idOrdenServ.ToString());
             return ordenServ;
         }
 
@@ -22,7 +22,7 @@ namespace Venta_de_Carros.Clases
         {
             try
             {
-                return ITM_Ventas.Ordenes_de_Servicio.ToList(); ;
+                return ITM_Ventas.Ordenes_de_Servicios.ToList(); ;
             }
             catch (Exception ex)
             {
@@ -35,7 +35,7 @@ namespace Venta_de_Carros.Clases
 
         public string Insertar()
         {
-            ITM_Ventas.Ordenes_de_Servicio.Add(Ordenes_de_Servicio);
+            ITM_Ventas.Ordenes_de_Servicios.Add(Ordenes_de_Servicio);
             ITM_Ventas.SaveChanges();
             return "Orden de servicio Insertada exitosamente";
         }
@@ -47,7 +47,7 @@ namespace Venta_de_Carros.Clases
             {
                 return "La orden de servicio no existe";
             }
-            ITM_Ventas.Ordenes_de_Servicio.AddOrUpdate(Ordenes_de_Servicio);
+            ITM_Ventas.Ordenes_de_Servicios.AddOrUpdate(Ordenes_de_Servicio);
             ITM_Ventas.SaveChanges();
             return "Se actualizó correctamente";
         }
@@ -61,7 +61,7 @@ namespace Venta_de_Carros.Clases
                 {
                     return "La orden de servicio no existe";
                 }
-                ITM_Ventas.Ordenes_de_Servicio.Remove(ordenServ);
+                ITM_Ventas.Ordenes_de_Servicios.Remove(ordenServ);
                 ITM_Ventas.SaveChanges();
                 return "Se eliminó la orden de servicio exitosamente";
             }

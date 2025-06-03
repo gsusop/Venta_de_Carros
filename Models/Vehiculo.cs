@@ -9,10 +9,10 @@
 
 namespace Venta_de_Carros.Models
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
-    
+    using System.Text.Json.Serialization;
+
     public partial class Vehiculo
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,7 +21,7 @@ namespace Venta_de_Carros.Models
             this.Historial_Vehiculo = new HashSet<Historial_Vehiculo>();
             this.Ordenes_de_Servicio = new HashSet<Ordenes_de_Servicio>();
             this.Vehiculo_en_Taller_Ubicacion = new HashSet<Vehiculo_en_Taller_Ubicacion>();
-            this.Venta = new HashSet<Venta>();
+            this.Ventas = new HashSet<Venta>();
         }
     
         public int ID_Vehiculo { get; set; }
@@ -35,25 +35,19 @@ namespace Venta_de_Carros.Models
         public System.DateTime Fecha_Ingreso { get; set; }
         public Nullable<System.DateTime> Fecha_Salida { get; set; }
         public string Estado_Vehiculo { get; set; }
-
-
-        [JsonIgnore]
+    
         public virtual Cliente Cliente { get; set; }
-
         [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Historial_Vehiculo> Historial_Vehiculo { get; set; }
-
         [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Ordenes_de_Servicio> Ordenes_de_Servicio { get; set; }
-
         [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Vehiculo_en_Taller_Ubicacion> Vehiculo_en_Taller_Ubicacion { get; set; }
-
         [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Venta> Venta { get; set; }
+        public virtual ICollection<Venta> Ventas { get; set; }
     }
 }

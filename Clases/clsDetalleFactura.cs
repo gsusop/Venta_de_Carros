@@ -9,11 +9,11 @@ namespace Venta_de_Carros.Clases
 {
     public class clsDetalleFactura
     {
-        private VentaDeCarrosTallerEntities ITM_Ventas = new VentaDeCarrosTallerEntities();
+        private VentaDeCarrosTallerEntities2 ITM_Ventas = new VentaDeCarrosTallerEntities2();
         public Detalle_Factura Detalle_Factura { get; set; }
         public string Insertar()
         {
-            ITM_Ventas.Detalle_Factura.Add(Detalle_Factura);
+            ITM_Ventas.Detalles_Facturas.Add(Detalle_Factura);
             ITM_Ventas.SaveChanges();
             return "Factura Insertada exitosamente";
         }
@@ -25,14 +25,14 @@ namespace Venta_de_Carros.Clases
             {
                 return "El detalle de la factura no existe";
             }
-            ITM_Ventas.Detalle_Factura.AddOrUpdate(Detalle_Factura);
+            ITM_Ventas.Detalles_Facturas.AddOrUpdate(Detalle_Factura);
             ITM_Ventas.SaveChanges();
             return "Se actualizó correctamente";
         }
 
         public Detalle_Factura Consultar(string IdDetalle_Factura)
         {
-            Detalle_Factura dellateFact = ITM_Ventas.Detalle_Factura.FirstOrDefault(e => e.ID_Detalle_Factura.ToString() == IdDetalle_Factura.ToString());
+            Detalle_Factura dellateFact = ITM_Ventas.Detalles_Facturas.FirstOrDefault(e => e.ID_Detalle_Factura.ToString() == IdDetalle_Factura.ToString());
             return dellateFact;
         }
 
@@ -45,7 +45,7 @@ namespace Venta_de_Carros.Clases
                 {
                     return "La factura no existe";
                 }
-                ITM_Ventas.Detalle_Factura.Remove(dellateFact);
+                ITM_Ventas.Detalles_Facturas.Remove(dellateFact);
                 ITM_Ventas.SaveChanges();
                 return "Se eliminó la factura exitosamente";
             }
@@ -57,7 +57,7 @@ namespace Venta_de_Carros.Clases
 
         public List<Detalle_Factura> ConsultarTodos()
         {
-            return ITM_Ventas.Detalle_Factura.ToList();
+            return ITM_Ventas.Detalles_Facturas.ToList();
         }
     }
 }
