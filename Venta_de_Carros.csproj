@@ -429,6 +429,18 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Paginas\Clientes.html" />
+    <Content Include="Paginas\Empleados.html" />
+    <Content Include="Paginas\Proveedores.html" />
+    <Content Include="Paginas\Scripts\Empleados.js" />
+    <Content Include="Paginas\Home.html" />
+    <Content Include="Paginas\RevisionGarantia.html" />
+    <Content Include="Paginas\Scripts\Clientes.js" />
+    <Content Include="Paginas\Scripts\Comunes\Garantia.html" />
+    <Content Include="Paginas\Scripts\Proveedores.js" />
+    <Content Include="Paginas\Scripts\RevisionGarantia.js" />
+    <Content Include="Paginas\Scripts\Ubicaciones_Taller.js" />
+    <Content Include="Paginas\Scripts\Vehiculos.js" />
     <Content Include="Paginas\DetalleFactura.html" />
     <Content Include="Paginas\DetalleRepuestoOrden.html" />
     <Content Include="Paginas\DetalleServicio.html" />
@@ -511,6 +523,8 @@
     <Content Include="Paginas\Scripts\Pagina1.js" />
     <Content Include="Paginas\Scripts\Pagina2.js" />
     <Content Include="Paginas\Scripts\Servicio.js" />
+    <Content Include="Paginas\Ubicaciones_Taller.html" />
+    <Content Include="Paginas\Vehiculos.html" />
     <Content Include="Paginas\Venta.html" />
     <Content Include="Scripts\adminlte.js" />
     <Content Include="Scripts\adminlte.min.js" />

@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VEHÍCULOS</title>
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link href="Estilos/css/all.min.css" rel="stylesheet" />
+    <link href="Estilos/adminlte.min.css" rel="stylesheet" />
+    <!-- Estilos para las tablas -->
+    <link href="Estilos/dataTables.min.css" rel="stylesheet" />
+    <link href="Estilos/dataTables.bootstrap4.min.css" rel="stylesheet" />
+</head>
+<style>
+    #tblVehiculos_length > label > select {
+        width: 60px;
+    }
+</style>
+<body class="hold-transition sidebar-mini">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- left column -->
+                <div class="col-md-12" id="dvMenu">
+                </div>
+                <div class="col-md-12">
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">GESTIÓN DE VEHÍCULOS</h3>
+                        </div>
+                        <form id="frmVehiculos">
+                            <div class="card-body">
+                                <div class="card card-gray-dark">
+                                    <div class="card-header">
+                                        <h3 class="card-title">DATOS DEL VEHÍCULO</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="txtID_Vehiculo">ID Vehículo</label>
+                                                    <input type="number" class="form-control" id="txtID_Vehiculo" placeholder="ID del vehículo">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="txtVIN">VIN</label>
+                                                    <input type="text" class="form-control" id="txtVIN" placeholder="VIN del vehículo">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="txtMarca">Marca</label>
+                                                    <input type="text" class="form-control" id="txtMarca" placeholder="Ej: Toyota">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="txtModelo">Modelo</label>
+                                                    <input type="text" class="form-control" id="txtModelo" placeholder="Ej: Corolla">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="txtAnio">Año</label>
+                                                    <input type="number" class="form-control" id="txtAnio" placeholder="2022">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="txtColor">Color</label>
+                                                    <input type="text" class="form-control" id="txtColor" placeholder="Rojo">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="txtPlaca">Placa</label>
+                                                    <input type="text" class="form-control" id="txtPlaca" placeholder="XYZ123">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="txtID_Cliente">ID Cliente</label>
+                                                    <input type="number" class="form-control" id="txtID_Cliente" placeholder="ID del cliente">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="txtFecha_Ingreso">Fecha Ingreso</label>
+                                                    <input type="date" class="form-control" id="txtFecha_Ingreso" placeholder="Fecha ingreso">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="txtFecha_Salida">Fecha Salida</label>
+                                                    <input type="date" class="form-control" id="txtFecha_Salida" placeholder="Fecha salida">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="txtEstado_Vehiculo">Estado Vehículo</label>
+                                                    <input type="text" class="form-control" id="txtEstado_Vehiculo" placeholder="Ej: Reparado">
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card card-danger">
+                                    <div class="card-header">
+                                        <h3 class="card-title">PROCESO</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <br />
+                                                <button type="button" id="btnInsertar" class="btn-block btn-lg btn-primary" onclick="EjecutarComando('POST', 'Insertar')">INSERTAR</button>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <br />
+                                                <button type="button" id="btnActualizar" class="btn-block btn-lg btn-primary" onclick="EjecutarComando('PUT', 'Actualizar')">ACTUALIZAR</button>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <br />
+                                                <button type="button" id="btnEliminar" class="btn-block btn-lg btn-primary" onclick="EjecutarComando('DELETE', 'Eliminar')">ELIMINAR</button>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <br />
+                                                <button type="button" id="btnConsultar" class="btn-block btn-lg btn-primary" onclick="Consultar()">CONSULTAR</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <table id="tblVehiculos" class="table table-bordered table-striped" style="width:100%;">
+                                                <thead>
+                                                    <tr>
+                                                        <th>ID_Vehiculo</th>
+                                                        <th>VIN</th>
+                                                        <th>Marca</th>
+                                                        <th>Modelo</th>
+                                                        <th>Año</th>
+                                                        <th>Color</th>
+                                                        <th>Placa</th>
+                                                        <th>ID_Cliente</th>
+                                                        <th>Fecha_Ingreso</th>
+                                                        <th>Fecha_Salida</th>
+                                                        <th>Estado_Vehiculo</th>
+                                                    </tr>
+                                                </thead>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div id="dvMensaje" class=""></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../Scripts/jquery-3.4.1.min.js"></script>
+    <script src="../Scripts/bootstrap.bundle.min.js"></script>
+    <!-- Tables -->
+    <script src="../Scripts/jquery.dataTables.min.js"></script>
+    <script src="../Scripts/dataTables.bootstrap4.min.js"></script>
+    <script src="Scripts/Comunes/Comunes.js"></script>
+    <script src="Scripts/Comunes/CRUD.js"></script>
+    <script src="Scripts/Vehiculos.js"></script>
+</body>
+</html>
