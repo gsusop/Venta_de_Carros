@@ -1,4 +1,4 @@
-﻿using Plantilla.Clases;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +7,9 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Cors;
 using Venta_de_Carros.Models;
+using Venta_de_Carros.Clases;
 
-namespace Plantilla.Controllers
+namespace Venta_de_Carros.Controllers
 {
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     [RoutePrefix("api/VehiculoenTallerUbicacion")]

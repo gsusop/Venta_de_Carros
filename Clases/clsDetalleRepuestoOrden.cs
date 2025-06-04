@@ -57,7 +57,7 @@ namespace Venta_de_Carros.Clases
             }
         }
 
-        //para actualizar   y eliminar
+        
         public Detalle_Repuestos_Orden Consultar(string IDDetalle_Repuesto)
         {
             Detalle_Repuestos_Orden detRepuOrd = ITM_Ventas.Detalle_Repuestos_Orden.FirstOrDefault(e => e.ID_Detalle_Repuesto.ToString() == IDDetalle_Repuesto.ToString());

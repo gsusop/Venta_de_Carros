@@ -41,7 +41,7 @@ namespace Venta_de_Carros.Controllers
         {
             clsDetalleRepuestoOrden detRepuOrd = new clsDetalleRepuestoOrden();
             detRepuOrd.Detalle_Repuestos_Orden = detalleRepuestoActualizado; 
-            return detRepuOrd.Insertar();
+            return detRepuOrd.Actualizar();
         }
 
 
