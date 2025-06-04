@@ -2,13 +2,11 @@
 var BaseURL = "http://ventadecarrostaller.runasp.net";
 
 class Servicio {
-    constructor(Nombre_Servicio, Descripcion, Precio_Base) {
-        this.ID_Servicio = Date.now()/1000;
+    constructor(ID_Servicio, Nombre_Servicio, Descripcion, Precio_Base) {
+        this.ID_Servicio = ID_Servicio;
         this.Nombre_Servicio = Nombre_Servicio;
         this.Descripcion = Descripcion;
         this.Precio_Base = Precio_Base;
-        this.Detalle_Servicio = null;
-        this.Servicios_Tipos = null;
     }
 }
 
@@ -21,36 +19,30 @@ function LlenarTablaServicios() {
     let URL = BaseURL + "/api/Servicios/ConsultarTodos";
     LlenarTablaXServiciosAuth(URL, "#tblServicios");
 }
+
+function limpiarObjeto(obj) {
+    const nuevoObj = {};
+    for (const key in obj) {
+        if (obj[key] !== null && obj[key] !== undefined) {
+            nuevoObj[key] = obj[key];
+        }
+    }
+    return nuevoObj;
+}
+
 async function EjecutarComando(Metodo, Funcion) {
     let URL = BaseURL + "/api/Servicios/" + Funcion;
     //Se construye el objeto empleado
-    const item = new Servicio($("#txtNombre_Servicio").val(), $("#txtDescripcion").val(), $("#txtPrecio_Base").val());
+    const item = new Servicio(
+        $("#txtID_Servicio").val(),
+        $("#txtNombre_Servicio").val(),
+        $("#txtDescripcion").val(),
+        $("#txtPrecio_Base").val());
     //Invoca el comando para ejecutar
     const Rpta = await EjecutarComandoServicioRptaAuth(Metodo, URL, item);
     LlenarTablaServicios();
 }
-async function Consultar() {
-    let Documento = $("#txtDocumento").val();
-    let URL = BaseURL + "api/Servicios/ConsultarXDocumento?Documento=" + Documento;
-    const empleado = await ConsultarServicioAuth(URL);
-    if (empleado != null) {
-        $("#txtNombre").val(empleado.Nombre);
-        $("#txtPrimerApellido").val(empleado.PrimerApellido);
-        $("#txtSegundoApellido").val(empleado.SegundoApellido);
-        $("#txtDireccion").val(empleado.Direccion);
-        $("#txtFechaNacimiento").val(empleado.FechaNacimiento.split('T')[0]);
-        $("#txtTelefono").val(empleado.Telefono);
-    }
-    else {
-        $("#dvMensaje").html("El empleado no está en la base de datos");
-        $("#txtNombre").val("");
-        $("#txtPrimerApellido").val("");
-        $("#txtSegundoApellido").val("");
-        $("#txtDireccion").val("");
-        $("#txtFechaNacimiento").val("");
-        $("#txtTelefono").val("");
-    }
-}
+
 
 
 
