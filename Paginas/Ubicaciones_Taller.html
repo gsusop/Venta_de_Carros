@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UBICACIONES TALLER</title>
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
+    <link href="Estilos/css/all.min.css" rel="stylesheet" />
+    <link href="Estilos/adminlte.min.css" rel="stylesheet" />
+    <!-- Estilos para las tablas -->
+    <link href="Estilos/dataTables.min.css" rel="stylesheet" />
+    <link href="Estilos/dataTables.bootstrap4.min.css" rel="stylesheet" />
+</head>
+<style>
+    #tblUbicaciones_length > label > select {
+        width: 60px;
+    }
+</style>
+<body class="hold-transition sidebar-mini">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Menú -->
+                <div class="col-md-12" id="dvMenu"></div>
+                <!-- Formulario y tabla -->
+                <div class="col-md-12">
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">GESTIÓN DE Ubicaciones Taller</h3>
+                        </div>
+                        <form id="frmUbicaciones">
+                            <div class="card-body">
+                                <div class="card card-gray-dark">
+                                    <div class="card-header">
+                                        <h3 class="card-title">DATOS ENTRADA</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="txtID_Ubicacion">ID Ubicación</label>
+                                                    <input type="number"
+                                                           class="form-control"
+                                                           id="txtID_Ubicacion"
+                                                           placeholder="ID de la Ubicación" />
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="txtNombre_Ubicacion">Nombre Ubicación</label>
+                                                    <input type="text"
+                                                           class="form-control"
+                                                           id="txtNombre_Ubicacion"
+                                                           placeholder="Nombre de la Ubicación" />
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="txtDireccion">Dirección</label>
+                                                    <input type="text"
+                                                           class="form-control"
+                                                           id="txtDireccion"
+                                                           placeholder="Dirección de la Ubicación" />
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="txtCiudad">Ciudad</label>
+                                                    <input type="text"
+                                                           class="form-control"
+                                                           id="txtCiudad"
+                                                           placeholder="Ciudad de la Ubicación" />
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card card-danger">
+                                    <div class="card-header">
+                                        <h3 class="card-title">PROCESO</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+
+                                            <div class="col-md-3">
+                                                <br />
+                                                <button type="button"
+                                                        id="btnInsertar"
+                                                        class="btn-block btn-lg btn-primary"
+                                                        onclick="EjecutarComando('POST', 'Insertar')">
+                                                    INSERTAR
+                                                </button>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <br />
+                                                <button type="button"
+                                                        id="btnActualizar"
+                                                        class="btn-block btn-lg btn-primary"
+                                                        onclick="EjecutarComando('PUT', 'Actualizar')">
+                                                    ACTUALIZAR
+                                                </button>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <br />
+                                                <button type="button"
+                                                        id="btnEliminar"
+                                                        class="btn-block btn-lg btn-primary"
+                                                        onclick="EjecutarComando('DELETE', 'Eliminar')">
+                                                    ELIMINAR
+                                                </button>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <br />
+                                                <button type="button"
+                                                        id="btnConsultar"
+                                                        class="btn-block btn-lg btn-primary"
+                                                        onclick="Consultar()">
+                                                    CONSULTAR
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <table id="tblUbicaciones"
+                                                   class="table table-bordered table-striped"
+                                                   style="width: 100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th>ID_Ubicacion</th>
+                                                        <th>Nombre_Ubicacion</th>
+                                                        <th>Direccion</th>
+                                                        <th>Ciudad</th>
+                                                    </tr>
+                                                </thead>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div id="dvMensaje"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../Scripts/jquery-3.4.1.min.js"></script>
+    <script src="../Scripts/bootstrap.bundle.min.js"></script>
+    <!-- Tables -->
+    <script src="../Scripts/jquery.dataTables.min.js"></script>
+    <script src="../Scripts/dataTables.bootstrap4.min.js"></script>
+    <script src="Scripts/Comunes/Comunes.js"></script>
+    <script src="Scripts/Comunes/CRUD.js"></script>
+    <script src="Scripts/Ubicaciones_Taller.js"></script>
+</body>
+</html>

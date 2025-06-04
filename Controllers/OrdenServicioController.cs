@@ -12,6 +12,7 @@ namespace Venta_de_Carros.Controllers
 {
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     [RoutePrefix("api/OrdenServicio")]
+    [Authorize]
     public class OrdenServicioController : ApiController
     {
 
