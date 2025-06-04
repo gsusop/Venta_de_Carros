@@ -13,6 +13,7 @@ namespace Venta_de_Carros.Controllers
     [EnableCors(origins: "*", headers: "*", methods: "*")]
 
     [RoutePrefix("api/InventarioRepuesto")]
+    [Authorize]
     public class InventarioRepuestoController : ApiController
     {
         [HttpGet]

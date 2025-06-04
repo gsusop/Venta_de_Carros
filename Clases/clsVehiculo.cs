@@ -54,6 +54,8 @@ namespace Venta_de_Carros.Clases
             }
         }
 
+       
+
         public List<Vehiculo> ConsultarTodos()
         {
             return ITM_Ventas.Vehiculo.ToList();
