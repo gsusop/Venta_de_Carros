@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DETALLE REPUESTOS ORDEN</title>
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link href="Estilos/css/all.min.css" rel="stylesheet" />
+    <link href="Estilos/adminlte.min.css" rel="stylesheet" />
+    <!--Estilos para las tablas-->
+    <link href="Estilos/dataTables.min.css" rel="stylesheet" />
+    <link href="Estilos/dataTables.bootstrap4.min.css" rel="stylesheet" />
+</head>
+<style>
+    #tblDetalleRepuestoOrden_length > label > select {
+        width: 60px;
+    }
+</style>
+<body class="hold-transition sidebar-mini">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- left column -->
+                <div class="col-md-12" id="dvMenu">
+                </div>
+                <div class="col-md-12">
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">GESTIÓN DETALLE REPUESTO ORDEN</h3>
+                        </div>
+                        <form id="frmIncapacidades">
+                            <div class="card-body">
+                                <div class="card card-gray-dark">
+                                    <div class="card-header">
+                                        <h3 class="card-title">DATOS ENTRADA</h3>
+                                    </div>
+                                    <div class="card-body">
+
+
+
+
+
+                                        <div class="row">
+
+                                            <!-- CAMPO OCULTO PARA ID_VENTA -->
+                                            <!-- <input type="hidden" id="txtID_Venta" /> -->
+
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="txtID_Detalle_Repuesto">Codigo Orden Repuesto</label>
+                                                    <input type="text" class="form-control" id="txtID_Detalle_Repuesto" placeholder="Id detalle repuesto">
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="txtID_Orden">Codigo Orden</label>
+                                                    <input type="text" class="form-control" id="txtID_Orden" placeholder="Id de la orden">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="txtID_Repuesto">Codigo Repuesto</label>
+                                                    <input type="text" class="form-control" id="txtID_Repuesto" placeholder="Id del repuesto">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="txtCantidad_Utilizada"> Cantidad</label>
+                                                    <input type="text" class="form-control" id="txtCantidad_Utilizada" placeholder="Cantidad">
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="txtPrecio_Unitario"> Precio unidad</label>
+                                                    <input type="number" class="form-control" id="txtPrecio_Unitario" placeholder="Precio unidad " step="0.01">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="txtSubtotal"> Precio total</label>
+                                                    <input type="number" class="form-control" id="txtSubtotal" placeholder="Precio total  " step="0.01">
+                                                </div>
+                                            </div>
+
+
+
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="card card-danger">
+                                    <div class="card-header">
+                                        <h3 class="card-title">PROCESO</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <br />
+                                                <button type="button" id="btnInsertar" class="btn-block btn-lg btn-primary" onclick="EjecutarComando('POST', 'Insertar')">INSERTAR</button>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <br />
+                                                <button type="button" id="btnActualizar" class="btn-block btn-lg btn-primary" onclick="EjecutarComando('PUT', 'Actualizar')">ACTUALIZAR</button>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <br />
+                                                <button type="button" id="btnEliminar" class="btn-block btn-lg btn-primary" onclick="EjecutarComando('DELETE', 'Eliminar')">ELIMINAR</button>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <br />
+                                                <button type="button" id="btnConsultar" class="btn-block btn-lg btn-primary" onclick="Consultar()">CONSULTAR</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <table id="tblDetalleRepuestoOrden" class="table table-bordered table-striped" style="width:100%;">
+                                                <thead>
+                                                    <tr>
+                                                        <th>ID_Detalle_Repuesto</th>
+                                                        <th>ID_Orden</th>
+                                                        <th>ID_Repuesto</th>
+                                                        <th>Cantidad_Utilizada</th>
+                                                        <th>Precio_Unitario</th>
+                                                        <th>Subtotal</th>
+                                                        <th>Detakke_Factura</th>
+                                                        <th>Ordenes_de_Servicio</th>
+                                                        <th>Inventario_Repuesto</th>
+
+                                                    </tr>
+                                                </thead>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div id="dvMensaje" class=""></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../Scripts/jquery-3.4.1.min.js"></script>
+    <script src="../Scripts/bootstrap.bundle.min.js"></script>
+    <!--Tables-->
+    <script src="../Scripts/jquery.dataTables.min.js"></script>
+    <script src="../Scripts/dataTables.bootstrap4.min.js"></script>
+    <script src="Scripts/Comunes/Comunes.js"></script>
+    <script src="Scripts/Comunes/CRUD.js"></script>
+    <script src="Scripts/DetalleRepuestoOrden.js"></script>
+</body>
+</html>
